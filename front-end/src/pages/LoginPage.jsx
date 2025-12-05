@@ -11,6 +11,7 @@ const LoginPage = () => {
     // TODO: loading state를 선언하세요
 
     // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    const navigate = useNavigate();
 
     // TODO: handleLogin 함수를 작성하세요
     // 1. 입력값 검증 (username과 password가 비어있는지 확인)
@@ -27,7 +28,7 @@ const LoginPage = () => {
     const handleKeyPress = (e) => {
         // TODO: 함수를 완성하세요
     };
-
+    const 회원가입이동하기 = () => navigate("/signup")
     return (
         <div className="login-container">
             <div className="login-box">
@@ -61,17 +62,28 @@ const LoginPage = () => {
                     </div>
 
                     <button className="facebook-login">
-                        Facebook으로 로그인
+                        SNS으로 로그인
                     </button>
 
                     <button className="forgot-password">
                         비밀번호를 잊으셨나요?
                     </button>
                 </div>
+                {
+                    // 익명 함수란 = 명칭을 작성하지 않고 1회성으로 사용하는 기능
+                    // 이름이 존재하는 함수란 기능에 명칭을 부여하여 다양한 태그에서 함수를 재사용하는 함수
+                    // onClick={} 클릭했을 때 특정 기능을 동작해라.
+                    // onClick={동작할 기능 명칭}
 
+                }
                 <div className="signup-box">
                     <p>
-                        계정이 없으신가요? <button className="signup-link">가입하기</button>
+                        계정이 없으신가요?
+                        <button className="signup-link"
+                                onClick={ () => navigate("/signup")}
+                        >
+                            가입하기
+                        </button>
                     </p>
                 </div>
             </div>
