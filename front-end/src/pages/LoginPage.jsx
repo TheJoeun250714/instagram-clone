@@ -21,12 +21,12 @@ const LoginPage = () => {
     const handleLogin = async () => {
 
         try {
-            const res = await apiService.login(username, password);
+            const res = await apiService.login(userEmail, password);
 
             alert("로그인 성공!");
             navigate("/feed");
         }catch(err){
-            if(err.res?.status === 401) {
+            if(err.response?.status === 401) {
               alert("이메일 또는 비밀번호가 올바르지 않습니다.");
             } else {
                 alert("로그인에 실패했습니다. 다시 로그인해주세요.")
