@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'http://localhost:9000/api';
 
 // TODO: axios 인스턴스를 생성하세요
 
@@ -9,7 +9,16 @@ const API_BASE_URL = 'http://localhost:8080/api';
 
 // TODO: 응답 인터셉터를 설정하세요
 // 401 에러가 발생하면 localStorage를 비우고 /login으로 이동
+/*
+export const 기능1번 = () => {}
+const 기능2번 = {
+     회원가입기능 : () => {},
+     로그인기능 : () => {}
+}
+export  default 기능2번;
+ */
 
+// 기능 2번과 같은 형태로 함수 활용
 const apiService = {
     // ===== 인증 API =====
 
@@ -18,6 +27,14 @@ const apiService = {
     // body: { username, email, password, fullName }
     signup: async (username, email, password, fullName) => {
         // TODO: API 호출을 완성하세요
+        const response = await axios.post(`${API_BASE_URL}/auth/signup`, {
+            userName: username,
+            userEmail: email,
+            userPassword: password,
+            userFullname: fullName,
+        });
+        return response.data;
+
     },
 
     // TODO: 로그인 API

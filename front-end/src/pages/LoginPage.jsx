@@ -1,15 +1,14 @@
-
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const LoginPage = () => {
     // TODO: username state를 선언하세요
-
+    const [username, setUsername] = useState('');
     // TODO: password state를 선언하세요
-
+    const [password, setPassword] = useState('');
     // TODO: loading state를 선언하세요
-
+    const [loading,setLoading] = useState(true);
     // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
     const navigate = useNavigate();
 
@@ -36,12 +35,13 @@ const LoginPage = () => {
                     <h1 className="login-title">Instagram</h1>
 
                     <div>
-                        {/* TODO: 아이디 입력 input 작성 */}
-                        {/* placeholder: "전화번호, 사용자 이름 또는 이메일" */}
-                        {/* value: username */}
-                        {/* onChange: setUsername */}
-                        {/* onKeyPress: handleKeyPress */}
-
+                        <input
+                            type="text"
+                            placeholder="전화번호, 사용자 이름 또는 이메일"
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            onKeyPress={handleKeyPress}
+                        />
                         {/* TODO: 비밀번호 입력 input 작성 */}
                         {/* type: "password" */}
                         {/* placeholder: "비밀번호" */}
@@ -53,6 +53,12 @@ const LoginPage = () => {
                         {/* onClick: handleLogin */}
                         {/* disabled: loading */}
                         {/* 버튼 텍스트: loading이면 "로그인 중...", 아니면 "로그인" */}
+                        <button className="login-button"
+                                onClick={handleLogin}
+                                disabled={loading}
+                        >
+                            {loading ? '로그인 중...' : '로그인'}
+                        </button>
                     </div>
 
                     <div className="divider">
@@ -80,7 +86,7 @@ const LoginPage = () => {
                     <p>
                         계정이 없으신가요?
                         <button className="signup-link"
-                                onClick={ () => navigate("/signup")}
+                                onClick={() => navigate("/signup")}
                         >
                             가입하기
                         </button>
