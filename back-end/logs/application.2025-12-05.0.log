@@ -153,3 +153,13 @@ This generated password is for development use only. Your security configuration
 2025-12-05 14:56:58.211  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
 2025-12-05 14:56:58.221  INFO 8688 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.607 seconds (process running for 9448.308)
 2025-12-05 14:56:58.224  INFO 8688 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-05 14:57:42.058  INFO 8688 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-05 14:57:42.059  INFO 8688 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-05 14:57:42.060  INFO 8688 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-05 14:57:42.269  INFO 8688 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.signUp()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-05 14:57:42.270  INFO 8688 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.signUp() 서비스 호출 ==========
+2025-12-05 14:57:42.275  INFO 8688 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [User(userId=0, userName=gildong, userEmail=gildong@email.com, userPassword=abc1234, userFullname=홍길동, userAvatar=null, createdAt=null, updatedAt=null)]
+2025-12-05 14:57:42.427  INFO 8688 --- [http-nio-9000-exec-2] c.i.user.model.service.UserServiceImpl   : 회원가입 완료 - 이메일: gildong@email.com, 사용자명: gildong
+2025-12-05 14:57:42.428  INFO 8688 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 153ms
+2025-12-05 14:57:42.428  INFO 8688 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-05 14:57:58.206  INFO 8688 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]

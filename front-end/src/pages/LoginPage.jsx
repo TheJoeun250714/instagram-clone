@@ -3,9 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const LoginPage = () => {
-    // TODO: username state를 선언하세요
     const [username, setUsername] = useState('');
-    // TODO: password state를 선언하세요
     const [password, setPassword] = useState('');
     // TODO: loading state를 선언하세요
     const [loading,setLoading] = useState(true);
@@ -20,7 +18,7 @@ const LoginPage = () => {
     // 5. 실패 시: alert로 에러 메시지 표시
     // 6. finally: loading을 false로 설정
     const handleLogin = async () => {
-        // TODO: 함수를 완성하세요
+        const res = await apiService.login(username, password);
     };
 
     // TODO: Enter 키 입력 시 handleLogin 호출하는 함수 작성
@@ -42,17 +40,15 @@ const LoginPage = () => {
                             onChange={e => setUsername(e.target.value)}
                             onKeyPress={handleKeyPress}
                         />
-                        {/* TODO: 비밀번호 입력 input 작성 */}
-                        {/* type: "password" */}
-                        {/* placeholder: "비밀번호" */}
-                        {/* value: password */}
-                        {/* onChange: setPassword */}
-                        {/* onKeyPress: handleKeyPress */}
 
-                        {/* TODO: 로그인 버튼 작성 */}
-                        {/* onClick: handleLogin */}
-                        {/* disabled: loading */}
-                        {/* 버튼 텍스트: loading이면 "로그인 중...", 아니면 "로그인" */}
+                        <input
+                            type="password"
+                            placeholder="비밀번호"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            onKeyPress={handleKeyPress}
+                        />
+
                         <button className="login-button"
                                 onClick={handleLogin}
                                 disabled={loading}
