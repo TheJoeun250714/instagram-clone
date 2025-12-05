@@ -73,10 +73,10 @@ const apiService = {
 
     // TODO: 로그인 API
     // POST /auth/login
-    // body: { username, password }
-    login: async (username, password) => {
+    // body: { userEmail, password }
+    login: async (userEmail, password) => {
         const res = await api.post('/auth/login', {
-            userName: username,
+            userEmail: userEmail,
             userPassword: password,
         });
 
