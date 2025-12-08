@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
 public class UserController {
-
     private final UserService userService;
     private final JwtUtil jwtUtil;
 
@@ -30,15 +29,12 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
-        // 사용자 인증 이메일, 비밀번호
         User user = userService.login(request.getUserEmail(), request.getUserPassword());
         if(user == null) {
             return ResponseEntity.status(401).body(null);
         }
-        // 로그인 성공 JWT 토큰 생성
-        String token = jwtUtil.generateToken(user.getUserId(), user.getUserEmail());
 
-        // 토큰 발급에 대한 응답 데이터 생성
+        String token = jwtUtil.generateToken(user.getUserId(), user.getUserEmail());
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setToken(token);
         loginResponse.setUser(user);
@@ -46,5 +42,4 @@ public class UserController {
         // ok == 200
         return ResponseEntity.ok(loginResponse);
     }
-
 }

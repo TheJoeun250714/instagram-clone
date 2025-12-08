@@ -19,7 +19,6 @@ const LoginPage = () => {
     // 5. 실패 시: alert로 에러 메시지 표시
     // 6. finally: loading을 false로 설정
     const handleLogin = async () => {
-
         try {
             const res = await apiService.login(userEmail, password);
 

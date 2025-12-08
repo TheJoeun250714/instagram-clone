@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoginResponse {
-    private String token; // JWT 토큰
-    private User user;    // 사용자 정보
+    private String token;       // JWT 토큰
+    private User user;          // 사용자 정보
 }
+
