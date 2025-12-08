@@ -1,4 +1,4 @@
-package com.instagram.story.model.service;
+package com.instagram.post.model.service;
 
 import com.instagram.post.model.dto.Post;
 

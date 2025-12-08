@@ -1,8 +1,8 @@
-package com.instagram.story.model.service;
+package com.instagram.post.model.service;
 
 
 import com.instagram.post.model.dto.Post;
-import com.instagram.story.model.mapper.PostMapper;
+import com.instagram.post.model.mapper.PostMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package com.instagram.story.controller;
+package com.instagram.post.controller;
 
 
 import com.instagram.post.model.dto.Post;
-import com.instagram.story.model.service.PostService;
+import com.instagram.post.model.service.PostService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

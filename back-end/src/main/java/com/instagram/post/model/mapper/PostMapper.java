@@ -1,4 +1,4 @@
-package com.instagram.story.model.mapper;
+package com.instagram.post.model.mapper;
 
 import com.instagram.post.model.dto.Post;
 import org.apache.ibatis.annotations.Mapper;
