@@ -106,11 +106,15 @@ const apiService = {
     // POST /posts
     // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
-        // TODO: API 호출을 완성하세요
-        const res = await  api.post("/posts", {
-            postImage: postImage,
-            postCaption: postCaption,
-            postLocation: postLocation
+
+        const formData = new formData();
+        formData.append('postImage', postImage);
+        formData.append('postCaption', postCaption);
+        formData.append('postLocation', postLocation);
+        const res = await  api.post("/posts", formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            }
         });
         return res.data;
     },

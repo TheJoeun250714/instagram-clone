@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
 @RestController
@@ -21,7 +22,9 @@ public class PostController {
     private final JwtUtil jwtUtil;
 
     @PostMapping
-    public ResponseEntity<String> createPost(@RequestBody Post post,
+    public ResponseEntity<String> createPost(@RequestPart MultipartFile postImage,
+                                             @RequestPart String postCaption,
+                                             @RequestPart String postLocation,
                                              @RequestHeader("Authorization") String authHeader) {
 
         // 현재 로그인한 사용자 id 가져오기
@@ -33,8 +36,7 @@ public class PostController {
         */
         String token = authHeader.substring(7); // 맨 앞 "Bearer "만 제거 하고 추출
         int currentUserId = jwtUtil.getUserIdFromToken(token); // token 에서 userId 추출
-        post.setUserId(currentUserId);
-        boolean success = postService.createPost(post);
+        boolean success = postService.createPost(postImage,postCaption,postLocation, currentUserId);
         // log 사용하여 token 과 currentUserId post 데이터 확인
 
         if(success) {
