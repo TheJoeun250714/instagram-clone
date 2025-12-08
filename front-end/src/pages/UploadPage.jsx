@@ -9,7 +9,7 @@ const UploadPage = () => {
     const [imagePreview, setImagePreview] = useState(null);
     const [caption, setCaption] = useState('');
     const [location, setLocation] = useState('');
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const user = JSON.parse(localStorage.getItem('user') || {});
@@ -51,6 +51,9 @@ const UploadPage = () => {
 
    const avatarImage = user.userAvatar && user.userAvatar.trim() !== ''?
         user.userAvatar : '/static/img/default-avatar.jpg';
+    const handleAvatarError = (e) => {
+        e.target.src ='/static/img/default-avatar.jpg';
+    }
     return (
         <div className="upload-container">
             <header className="upload-header">
@@ -72,9 +75,6 @@ const UploadPage = () => {
             <div className="upload-content">
                 <div className="upload-card">
                     <div className="upload-image-area">
-                        {/* TODO: imagePreview가 있으면 이미지 표시, 없으면 업로드 UI 표시 */}
-                        {/* FileReader로 변환한 base64 이미지를 img src에 사용 */}
-                        {/* input type="file" accept="image/*" onChange={handleImageChange} */}
                         {imagePreview ? (
                             <>
                                 <img src={imagePreview}
@@ -111,7 +111,8 @@ const UploadPage = () => {
                     <div className="upload-caption-area">
                         <div className="upload-caption-content">
                             <img className="upload-user-avatar"
-                            src={user.userAvatar || '/static/img/default-avatar.jpg'}
+                            src={avatarImage}
+                                 onError={handleAvatarError}
                             />
                             <div className="upload-caption-right">
                                 <div className="upload-username">
@@ -123,6 +124,7 @@ const UploadPage = () => {
                                     value={caption}
                                     onChange={(e) => setCaption(e.target.value)}
                                     rows={4}
+                                    className="upload-caption-input"
                                 />
                                 <div className="upload-caption-content">
                                     {caption.length}/2,200
