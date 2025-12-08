@@ -107,7 +107,7 @@ const apiService = {
     // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
 
-        const formData = new formData();
+        const formData = new FormData();
         formData.append('postImage', postImage);
         formData.append('postCaption', postCaption);
         formData.append('postLocation', postLocation);

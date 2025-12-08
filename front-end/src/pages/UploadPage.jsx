@@ -32,7 +32,7 @@ const UploadPage = () => {
         }
         try {
             setLoading(true);
-            await apiService.createPost(imagePreview, caption, location);
+            await apiService.createPost(selectedImage, caption, location);
             alert("게시물이 성공적으로 등록되었습니다.");
             navigate("/feed")
         } catch (err) {
