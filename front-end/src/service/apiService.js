@@ -90,23 +90,17 @@ const apiService = {
 
     // ===== 게시물 API =====
 
-    // TODO: 모든 게시물 조회
-    // GET /posts
     getPosts: async () => {
-        // TODO: API 호출을 완성하세요
+       const res = await api.get('/posts');
+       return res.data;
     },
 
-    // TODO: 특정 게시물 조회
-    // GET /posts/:postId
     getPost: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.get('/posts/' + postId);
+        return res.data;
     },
 
-    // TODO: 게시물 작성
-    // POST /posts
-    // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
-
         const formData = new FormData();
         formData.append('postImage', postImage);
         formData.append('postCaption', postCaption);

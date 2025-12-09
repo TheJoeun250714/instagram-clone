@@ -16,7 +16,7 @@ const UploadPage = () => {
 
     const navigate = useNavigate();
 
-    const user = JSON.parse(localStorage.getItem('user') || {});
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
 
     const handleImageChange = (e) => {
         const f = e.target.files[0];
@@ -98,7 +98,7 @@ const UploadPage = () => {
                                         onClick={() => setSelectedFilter(option.filter)}
                                         >
                                             <span className="filter-name">{option.name}</span>
-                                            <div className="filter-thumnail"
+                                            <div className="filter-thumbnail"
                                             style={{
                                                 backgroundImage:`url(${imagePreview})`,
                                                 filter: option.filter,

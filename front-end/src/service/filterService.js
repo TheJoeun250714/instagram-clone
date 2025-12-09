@@ -17,6 +17,7 @@ export const FILTER_OPTIONS = [
 export const getFilteredFile = async (file, filter) => {
     // 필터가 없으면 원본 그대로 반환
     if (!filter || filter === 'none') return file;
+
     return new Promise(resolve => {
         const img = new Image();
         const url = URL.createObjectURL(file);
@@ -40,19 +41,20 @@ export const getFilteredFile = async (file, filter) => {
                         resolve(
                             new File([blob],
                                 file.name,
-                                {type: file.type, lastModified: new Date()}
-                            )
+                                {type: file.type, lastModified: new Date()
+                                })
                         );
                     },
                     file.type,
                     0.9
                 );
-                img.src = url;
+
 
             } catch (err) {
                 console.log(err);
                 return file;// 문제시 원본 반환
             }
-        }
+        };
+        img.src = url;
     });
 };
