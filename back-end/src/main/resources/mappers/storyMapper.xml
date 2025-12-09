@@ -20,5 +20,11 @@
         where user_id = #{userId}
     </select>
 
+
+    <update id="updateStoryImage" parameterType="Story">
+        UPDATE stories
+        SET story_image = #{storyImage}
+        WHERE story_id = #{storyId}
+    </update>
     <!-- 만료된 스토리는 삭제가 되는 것일까? 안보이고 보관처리가 되는 것일까 ?-->
 </mapper>
