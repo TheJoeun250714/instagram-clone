@@ -37,7 +37,10 @@ const UploadPage = () => {
         }
         try {
             setLoading(true);
-            await apiService.createPost(selectedImage, caption, location);
+            // TODO : 1. 필터가 적용된 이미지 파일 생성한 데이터 변수에 담기
+            const filteredImage = await getFilteredFile(selectedImage,selectedFilter);
+            // TODO : 2. 필터가 적용된 이미지를 서버에 전송
+            await apiService.createPost(filteredImage, caption, location);
             alert("게시물이 성공적으로 등록되었습니다.");
             navigate("/feed")
         } catch (err) {

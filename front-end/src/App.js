@@ -6,6 +6,7 @@ import PrivateRoute from "./provider/PrivateRoute";
 import FeedPage from "./pages/FeedPage";
 import UploadPage from "./pages/UploadPage";
 import SignupPage from "./pages/SignupPage";
+import StoryUploadPage from "./pages/StoryUploadPage";
 
 // TODO: 필요한 컴포넌트들을 import 하세요
 
@@ -29,7 +30,13 @@ function App() {
                                  <UploadPage />
                              </PrivateRoute>
                         }
-
+                 />
+                 <Route
+                     path="/story/upload"
+                    element={
+                     <PrivateRoute>
+                        <StoryUploadPage/>
+                    </PrivateRoute>}
                  />
              </Routes>
          </BrowserRouter>

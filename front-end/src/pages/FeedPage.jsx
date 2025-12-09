@@ -4,16 +4,12 @@ import apiService from '../service/apiService';
 import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User} from 'lucide-react';
 
 const FeedPage = () => {
-    // TODO: posts state를 선언하세요 (초기값: [])
     const [posts, setPosts] = useState([]);
 
-    // TODO: stories state를 선언하세요 (초기값: [])
     const [stories, setStories] = useState([]);
 
-    // TODO: loading state를 선언하세요 (초기값: true)
     const [loading, setLoading] = useState(false);
 
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
     const navigate = useNavigate();
     // TODO: useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
 
@@ -43,7 +39,6 @@ const FeedPage = () => {
         // TODO: 함수를 완성하세요
     };
 
-    // TODO: loading이 true면 "로딩 중..." 표시
     if (loading) {
         return (
             <div className="feed-container">
@@ -65,6 +60,7 @@ const FeedPage = () => {
                         <MessageCircle className="header-icon"/>
                         <PlusSquare className="header-icon"
                                     onClick={() => navigate(('/upload'))}/>
+                        {/* TODO : 아이콘 클릭하면 스토리 업로드로 이동설정 */}
                         <Film className="header-icon"/>
                         <User className="header-icon" onClick={handleLogout}/>
                     </div>
@@ -72,9 +68,6 @@ const FeedPage = () => {
             </header>
 
             <div className="feed-content">
-                {/* TODO: 스토리 섹션 작성 */}
-                {/* stories 배열이 있을 때만 표시 */}
-                {/* stories.map으로 각 스토리를 렌더링 */}
                 {stories.length > 0 && (
                     <div className="stories-container">
                         <div className="stories-wrapper">
@@ -137,7 +130,6 @@ const FeedPage = () => {
                         </article>
                     ))
                 )}
-                {/* TODO: 게시물이 없을 때 메시지 표시 */}
             </div>
         </div>
     );
