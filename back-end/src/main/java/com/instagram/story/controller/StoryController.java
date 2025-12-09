@@ -25,7 +25,7 @@ public class StoryController {
 
     @PostMapping
     public ResponseEntity<?> createStory(@RequestHeader("Authorization") String token,
-                                         @RequestParam("storyImage")MultipartFile storyImage) {
+                                         @RequestPart("storyImage")MultipartFile storyImage) {
 
         try {
             String jwtToken = token.substring(7);

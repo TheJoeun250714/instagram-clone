@@ -61,7 +61,8 @@ const FeedPage = () => {
                         <PlusSquare className="header-icon"
                                     onClick={() => navigate(('/upload'))}/>
                         {/* TODO : 아이콘 클릭하면 스토리 업로드로 이동설정 */}
-                        <Film className="header-icon"/>
+                        <Film className="header-icon"
+                        onClick={() => navigate("/story/upload")}/>
                         <User className="header-icon" onClick={handleLogout}/>
                     </div>
                 </div>
