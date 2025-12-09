@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -41,6 +42,27 @@ public class StoryController {
             return ResponseEntity.badRequest().body("파일 업로드 실패 : " + e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("스토리 생성 실패 : " + e.getMessage());
+        }
+    }
+
+
+    @GetMapping
+    public ResponseEntity<?> getAllStories(){
+        try{
+            List<Story> stories = storyService.getAllStories();
+            return  ResponseEntity.ok(stories);
+        } catch (Exception e){
+            return ResponseEntity.badRequest().body("스토리 조회 실패 : "+e.getMessage());
+        }
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getStory(@PathVariable("userId") int userId){
+        try{
+           Story a = storyService.getStoriesByUserId(userId);
+           return  ResponseEntity.ok(a);
+        } catch (Exception e){
+            return ResponseEntity.badRequest().body("스토리 조회 실패 : "+e.getMessage());
         }
     }
 }
