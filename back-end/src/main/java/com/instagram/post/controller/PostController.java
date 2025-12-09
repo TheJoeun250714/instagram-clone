@@ -13,6 +13,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/posts")
@@ -21,6 +23,15 @@ public class PostController {
     private final PostService postService;
     private final JwtUtil jwtUtil;
 
+    @GetMapping
+    public ResponseEntity<List<Post>> getAllPosts(@RequestHeader("Authorization") String authHeader){
+
+        String token = authHeader.substring(7);
+        int currentUSerId = jwtUtil.getUserIdFromToken(token);
+        List<Post> posts = postService.getAllPosts(currentUSerId);
+        return ResponseEntity.ok(posts);
+    }
+    
     @PostMapping
     public ResponseEntity<String> createPost(@RequestPart MultipartFile postImage,
                                              @RequestPart String postCaption,

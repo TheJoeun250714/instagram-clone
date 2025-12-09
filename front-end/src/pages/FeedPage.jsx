@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User} from 'lucide-react';
+import Header from "../components/Header";
 
 const FeedPage = () => {
     const [posts, setPosts] = useState([]);
@@ -11,16 +12,10 @@ const FeedPage = () => {
     const [loading, setLoading] = useState(false);
 
     const navigate = useNavigate();
-    // TODO: useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
     useEffect(() => {
         loadFeedData();
     },[]);
-    // TODO: loadFeedData 함수를 작성하세요
-    // 1. try-catch 사용
-    // 2. apiService.getPosts()와 apiService.getStories() 개별 호출
-    // 3. 받아온 데이터로 posts와 stories state 업데이트
-    // 4. catch: 에러 처리 (console.error, alert)
-    // 5. finally: loading을 false로 설정
+
     const loadFeedData = async () => {
        setLoading(true);
 
@@ -55,9 +50,6 @@ const FeedPage = () => {
       }
     };
 
-    const handleLogout = () => {
-        if(window.confirm('로그아웃 하시겠습니까?')) apiService.logout();
-    };
 
     if (loading) {
         return (
@@ -71,21 +63,7 @@ const FeedPage = () => {
 
     return (
         <div className="feed-container">
-            <header className="header">
-                <div className="header-container">
-                    <h1 className="header-title">Instagram</h1>
-                    <div className="header-nav">
-                        <Home className="header-icon"
-                              onClick={() => navigate(('/'))}/>
-                        <MessageCircle className="header-icon"/>
-                        <PlusSquare className="header-icon"
-                                    onClick={() => navigate(('/upload'))}/>
-                        <Film className="header-icon"
-                        onClick={() => navigate("/story/upload")}/>
-                        <User className="header-icon" onClick={handleLogout}/>
-                    </div>
-                </div>
-            </header>
+        <Header />
 
             <div className="feed-content">
                 {stories.length > 0 && (

@@ -3,7 +3,10 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 import {ArrowLeft, Image} from 'lucide-react';
 import {getFilteredFile, FILTER_OPTIONS} from "../service/filterService";
+import Header from "../components/Header";
 
+// 필요에 따라 소비자가 업로드한 이미지를 리사이즈 처리화 해야할 수 있다.
+// 예 -> 10mb이상의 이미지를올리면 8mb 이하의 이미지로 사이즈 축소, 크기 축소
 const UploadPage = () => {
 
     const [selectedImage, setSelectedImage] = useState(null);
@@ -64,21 +67,13 @@ const UploadPage = () => {
     }
     return (
         <div className="upload-container">
-            <header className="upload-header">
-                <div className="upload-header-content">
-                    <button className="upload-back-btn"
-                            onClick={() => navigate(("/feed"))}>
-                        <ArrowLeft size={24}/>
-                    </button>
-
-                    <h2 className="upload-title">새 게시물</h2>
-
-                    <button className="upload-submit-btn"
-                            onClick={handlePost} disabled={loading}>
-                        {loading ? '등록 중...' : '공유'}
-                    </button>
-                </div>
-            </header>
+        <Header
+            type="upload"
+            title="새 게시물"
+            onSubmit={handlePost}
+            submitDisabled={!selectedImage || !caption.trim()}
+            loading={loading}
+            submitText={"공유"} />
 
             <div className="upload-content">
                 <div className="upload-card">

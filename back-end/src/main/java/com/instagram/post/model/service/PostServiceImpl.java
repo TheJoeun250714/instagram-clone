@@ -22,6 +22,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getAllPosts(int currentUserId) {
+
         return postMapper.selectAllPosts(currentUserId);
     }
 

@@ -7,8 +7,10 @@ import FeedPage from "./pages/FeedPage";
 import UploadPage from "./pages/UploadPage";
 import SignupPage from "./pages/SignupPage";
 import StoryUploadPage from "./pages/StoryUploadPage";
+import MyFeedPage from "./pages/MyFeedPage";
+import StoryDetail from "./pages/StoryDetail";
 
-// TODO: 필요한 컴포넌트들을 import 하세요
+
 
 function App() {
     return (
@@ -38,6 +40,15 @@ function App() {
                         <StoryUploadPage/>
                     </PrivateRoute>}
                  />
+
+                 <Route
+                     path="/myfeed"
+                     element={<MyFeedPage />}
+                     />
+                 <Route
+                     path="/story/detail"
+                     element={<StoryDetail />}
+                     />
              </Routes>
          </BrowserRouter>
         </div>
