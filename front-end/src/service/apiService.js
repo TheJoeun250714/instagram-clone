@@ -124,13 +124,15 @@ const apiService = {
     // TODO: 좋아요 추가
     // POST /posts/:postId/like
     addLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
+       const res = await api.post(`/posts/${postId}/like`);
+       return res.data;
     },
 
     // TODO: 좋아요 취소
     // DELETE /posts/:postId/like
     removeLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.delete(`/posts/${postId}/like`);
+        return res.data;
     },
 
     // ===== 댓글 API =====

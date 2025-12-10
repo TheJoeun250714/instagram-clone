@@ -57,11 +57,9 @@ public class PostController {
         }
     }
 
-
     @GetMapping("/{userId}")
     public ResponseEntity<List<Post>> getAllPostsByUserId( @RequestHeader("Authorization") String authHeader,
                                                            @PathVariable int userId) {
-
         try {
             String token = authHeader.substring(7);
             int currentUserId = jwtUtil.getUserIdFromToken(token);
@@ -71,6 +69,47 @@ public class PostController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
+    }
+    /*
+        // POST /posts/:postId/like
+    addLike: async (postId) => {
+        // TODO: API 호출을 완성하세요
+    },
 
+    // TODO: 좋아요 취소
+    // DELETE /posts/:postId/like
+    removeLike: async (postId) => {
+        // TODO: API 호출을 완성하세요
+    },
+     */
+
+    @PostMapping("{postId}/like")
+    public ResponseEntity<Boolean> addLike(@PathVariable int postId,
+                                           @RequestHeader("Authorization") String authHeader){
+        try {
+            String token = authHeader.substring(7);
+            int currentUserId = jwtUtil.getUserIdFromToken(token);
+
+            boolean result = postService.addLike(postId, currentUserId);
+            return ResponseEntity.ok(result);
+        } catch (Exception e)  {
+            log.error("좋아요 추가 실패 : {}", e.getMessage());
+            return ResponseEntity.badRequest().body(false);
+        }
+    }
+
+    @DeleteMapping("{postId}/like")
+    public ResponseEntity<Boolean> removeLike(@PathVariable int postId,
+                                           @RequestHeader("Authorization") String authHeader){
+        try {
+            String token = authHeader.substring(7);
+            int currentUserId = jwtUtil.getUserIdFromToken(token);
+
+            boolean result = postService.removeLike(postId, currentUserId);
+            return ResponseEntity.ok(result);
+        } catch (Exception e)  {
+            log.error("좋아요 취소 실패 : {}", e.getMessage());
+            return ResponseEntity.badRequest().body(false);
+        }
     }
 }
