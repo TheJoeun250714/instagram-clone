@@ -3,6 +3,18 @@ import {useNavigate, useParams} from 'react-router-dom';
 import { X, MoreHorizontal, Heart, Send } from 'lucide-react';
 import apiService, {API_BASE_URL} from "../service/apiService";
 import {getImageUrl} from "../service/commonService";
+
+/**
+ * commonService 에 현재 날짜를 몇 시간 전에 업로드했는지 formatDate 메서드 사용하여 날짜 변환
+ *  <span className="story-time">
+*        {storyData.createdAt}
+*  </span>
+ *
+ *  formatDate 형태로 1시간 1분전 업로드형태 수정
+ *  or
+ *  formatDate 형태로 yyyy-mm-dd 형태로 확인 수정
+ */
+
 // story 의 경우 상대방의 스토리를 다른 유저가 선택해서보는 것이 아니라
 // 유저가 올린 스토리를 오래된 순서부터 하나씩 보여짐 어떤 스토리와 스토리가 얼만큼 있는지
 // 유저 프로필을 클릭하지 않으면 알 수 없다.
