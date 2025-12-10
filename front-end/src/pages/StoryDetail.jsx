@@ -57,7 +57,7 @@ const StoryDetail = () => {
         <div className="story-viewer-container">
             <div
                 className="story-bg-blur"
-                style={{backgroundImage: `url(${storyData.storyImage})`}}
+                style={{backgroundImage: `url(${storyData.userAvatar})`}}
             />
 
             <div className="story-content-box">
@@ -70,8 +70,8 @@ const StoryDetail = () => {
                 <div className="story-header-info">
                     <div className="story-user">
                         <img src={storyData.userImage} alt="user" className="story-user-avatar" />
-                        <span className="story-username">{storyData.username}</span>
-                        <span className="story-time">{storyData.uploadedAt}</span>
+                        <span className="story-username">{storyData.userName}</span>
+                        <span className="story-time">{storyData.createdAt}</span>
                     </div>
                     <div className="story-header-actions">
                         <MoreHorizontal color="white" className="story-icon"/>

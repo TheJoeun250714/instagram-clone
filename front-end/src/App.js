@@ -26,7 +26,7 @@ function App() {
                                </PrivateRoute>}
                     />
                     <Route
-                        path="/story/detail/:storyId"
+                        path="/story/detail/:userId"
                         element={
                             <PrivateRoute>
                                 <StoryDetail/>
