@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User} from 'lucide-react';
 import Header from "../components/Header";
+import {getImageUrl} from "../service/commonService";
 {/* heart 를 클릭하면 좋아요 수 증가 */}
 const FeedPage = () => {
     const [posts, setPosts] = useState([]);
@@ -103,7 +104,7 @@ const FeedPage = () => {
                                 >
                                     <div className="story-avatar-wrapper"
                                          key={story.id}>
-                                        <img src={story.userAvatar}
+                                        <img src={getImageUrl(story.userAvatar)}
                                              className="story-avatar"/>
                                     </div>
                                     <span className="story-username">
@@ -121,7 +122,7 @@ const FeedPage = () => {
                         <article key={post.postId} className="post-card">
                             <div className="post-header">
                                 <div className="post-user-info">
-                                    <img src={post.userAvatar} className="post-user-avatar"/>
+                                    <img src={getImageUrl(post.userAvatar)} className="post-user-avatar"/>
                                     <span className="post-username">{post.userName}</span>
                                 </div>
                                 <MoreHorizontal className="post-more-icon" />

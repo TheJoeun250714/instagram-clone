@@ -9,6 +9,7 @@ import SignupPage from "./pages/SignupPage";
 import StoryUploadPage from "./pages/StoryUploadPage";
 import MyFeedPage from "./pages/MyFeedPage";
 import StoryDetail from "./pages/StoryDetail";
+import EditProfilePage from "./pages/EditProfilePage";
 
 
 function App() {
@@ -63,7 +64,14 @@ function App() {
                             <MyFeedPage/>
                         </PrivateRoute>}
                     />
-
+                    <Route
+                        path="/profile/edit"
+                        element={
+                            <PrivateRoute>
+                               <EditProfilePage />
+                            </PrivateRoute>
+                        }
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

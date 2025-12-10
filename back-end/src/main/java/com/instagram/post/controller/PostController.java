@@ -70,18 +70,6 @@ public class PostController {
             return ResponseEntity.badRequest().build();
         }
     }
-    /*
-        // POST /posts/:postId/like
-    addLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
-    },
-
-    // TODO: 좋아요 취소
-    // DELETE /posts/:postId/like
-    removeLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
-    },
-     */
 
     @PostMapping("{postId}/like")
     public ResponseEntity<Boolean> addLike(@PathVariable int postId,

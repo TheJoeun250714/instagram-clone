@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import { Grid, Bookmark, Settings } from 'lucide-react';
 import apiService from "../service/apiService";
 import {useNavigate} from "react-router-dom";
+import {getImageUrl} from "../service/commonService";
 
 const MyFeedPage = () => {
     const [user, setUser] = useState(null);
@@ -50,7 +51,7 @@ const MyFeedPage = () => {
                     <div className="profile-image-container">
                         <div className="profile-image-border">
                             <img
-                                src={currentUser.userAvatar}
+                                src={getImageUrl(currentUser.userAvatar)}
                                 alt="profile"
                                 className="profile-image-large"
                             />
@@ -61,9 +62,13 @@ const MyFeedPage = () => {
                         <div className="profile-title-row">
                             <h2 className="profile-username">{currentUser.userName}</h2>
                             <div className="profile-actions">
-                                <button className="profile-edit-btn">프로필 편집</button>
+                                <button className="profile-edit-btn"
+                                onClick={
+                                    () => navigate('/profile/edit')
+                                }
+                                >프로필 편집</button>
                                 <button className="profile-archive-btn">보관함 보기</button>
-                                <Settings size={20} className="profile-settings-icon" />
+
                             </div>
                         </div>
 
