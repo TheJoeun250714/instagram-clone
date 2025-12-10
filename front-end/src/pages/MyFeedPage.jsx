@@ -1,29 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { Grid, Bookmark, Settings } from 'lucide-react';
+import apiService from "../service/apiService";
+import {useNavigate} from "react-router-dom";
 
 const MyFeedPage = () => {
-    const [user, setUser] = useState({
-        username: "my_instagram",
-        name: "내 이름",
-        profileImage: null,
-        postCount: 12,
-        followerCount: 150,
-        followingCount: 45,
-        bio: "안녕하세요 \n일상 기록용 계정입니다."
-    });
-
+    const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
     const [activeTab, setActiveTab] = useState('posts');
-
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate() ;
     useEffect(() => {
-        const dummyPosts = Array.from({ length: 9 }).map((_, i) => ({
-            id: i,
-            image: `https://picsum.photos/300/300?random=${i}`
-        }));
-        setPosts(dummyPosts);
+        loadMyFeedData();
     }, []);
 
+    const loadMyFeedData = async () => {
+        setLoading(true);
+        try {
+            const currentUser = JSON.parse(localStorage.getItem('user') || '{}');
+            const userId = currentUser.userId;
+
+            if (!userId) return navigate('/login');
+
+            // 전체 게시물 가져오기
+            const allPosts = await apiService.getPosts();
+
+            // 내 게시물만 필터링
+            const myPosts = allPosts.filter(post => post.userId !== userId);
+            setPosts(myPosts);
+        } catch (error) {
+            console.log(error);
+            alert("데이터를 불러오는데 실패했습니다.");
+        } finally {
+            setLoading(false);
+        }
+    }
     return (
         <div className="feed-container">
             <Header type="feed" />

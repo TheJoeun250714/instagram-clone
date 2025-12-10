@@ -11,46 +11,51 @@ import MyFeedPage from "./pages/MyFeedPage";
 import StoryDetail from "./pages/StoryDetail";
 
 
-
 function App() {
     return (
         <div>
-         <BrowserRouter>
-             <Routes>
-                 <Route path="/" element={<Navigate to="/login" replace />} />
-                 <Route path="/login" element={<LoginPage />} />
-                 <Route path="/signup" element={<SignupPage />} />
-                 <Route path="/feed"
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/login" replace/>}/>
+                    <Route path="/login" element={<LoginPage/>}/>
+                    <Route path="/signup" element={<SignupPage/>}/>
+                    <Route path="/feed"
+                           element={
+                               <PrivateRoute>
+                                   <FeedPage/>
+                               </PrivateRoute>}
+                    />
+                    <Route
+                        path="/story/detail/:storyId"
                         element={
-                     <PrivateRoute>
-                         <FeedPage />
-                     </PrivateRoute>}
-                 />
-                 <Route path="/upload"
+                            <PrivateRoute>
+                                <StoryDetail/>
+                            </PrivateRoute>}
+                    />
+                    <Route path="/upload"
+                           element={
+                               <PrivateRoute>
+                                   <UploadPage/>
+                               </PrivateRoute>
+                           }
+                    />
+                    <Route
+                        path="/story/upload"
                         element={
-                             <PrivateRoute>
-                                 <UploadPage />
-                             </PrivateRoute>
-                        }
-                 />
-                 <Route
-                     path="/story/upload"
-                    element={
-                     <PrivateRoute>
-                        <StoryUploadPage/>
-                    </PrivateRoute>}
-                 />
+                            <PrivateRoute>
+                                <StoryUploadPage/>
+                            </PrivateRoute>}
+                    />
 
-                 <Route
-                     path="/myfeed"
-                     element={<MyFeedPage />}
-                     />
-                 <Route
-                     path="/story/detail"
-                     element={<StoryDetail />}
-                     />
-             </Routes>
-         </BrowserRouter>
+                    <Route
+                        path="/myfeed"
+                        element={<PrivateRoute>
+                            <MyFeedPage/>
+                        </PrivateRoute>}
+                    />
+
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }

@@ -5,11 +5,12 @@ import apiService from "../service/apiService";
 
 /*
 * TODO :
-* 과제 1: 로그아웃 대신 /myfeed 로 이동하게 설정하기
-* 과제 2: FeedPage  key={story.storyId} 클릭하면 /story/detail로 이동하기
-* 과제 3: MyFeedPage 와 StoryDetail 임의 데이터를 controller 에서 가져온 데이터로 변경해보기
-*
-*
+과제 3: MyFeedPage 와 StoryDetail 임의 데이터를 controller 에서 가져온 데이터로 변경해보기
+GET -> mapper.xml mapper.java service.java serviceImpl.java restcontroller.java 순서로 작업 후
+       postman 이나 백엔드 api/endpoint 주소에서 데이터를 가져오는지 확인
+       APIservice.js 에서 백엔드 데이터 전달받는 작업
+        각 jsx 에서 api 로 가져온 데이터를 화면에 보여주는작업
+        이후 세부 js 작업 진행
 * */
 const Header = ({
     type="feed",
@@ -37,7 +38,7 @@ const Header = ({
                                     onClick={() => navigate(('/upload'))}/>
                         <Film className="header-icon"
                               onClick={() => navigate("/story/upload")}/>
-                        <User className="header-icon" onClick={handleLogout}/>
+                        <User className="header-icon" onClick={() => navigate("/myfeed")}/>
                     </div>
                 </div>
             </header>

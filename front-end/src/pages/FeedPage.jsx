@@ -70,11 +70,18 @@ const FeedPage = () => {
                     <div className="stories-container">
                         <div className="stories-wrapper">
                             {stories.map((story) => (
-                                <div key={story.storyId} className="story-item">
-                                    <div className="story-avatar-wrapper" key={story.id}>
-                                        <img src={story.userAvatar} className="story-avatar"/>
+                                <div key={story.storyId}
+                                     className="story-item"
+                                     onClick={() => navigate(`/story/detail/${story.storyId}`)}
+                                >
+                                    <div className="story-avatar-wrapper"
+                                         key={story.id}>
+                                        <img src={story.userAvatar}
+                                             className="story-avatar"/>
                                     </div>
-                                    <span className="story-username">{story.userName}</span>
+                                    <span className="story-username">
+                                        {story.userName}
+                                    </span>
                                 </div>
                             ))}
                         </div>

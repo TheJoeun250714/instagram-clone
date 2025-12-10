@@ -2201,3 +2201,39 @@ This generated password is for development use only. Your security configuration
 2025-12-09 17:02:11.496  INFO 18436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
 2025-12-09 17:02:11.509  INFO 18436 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 12.047 seconds (process running for 26312.432)
 2025-12-09 17:02:11.517  INFO 18436 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-09 17:03:11.442  INFO 18436 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-09 17:08:37.511  INFO 18436 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09 17:08:37.518  INFO 18436 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09 17:08:37.521  INFO 18436 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-09 17:08:37.542  INFO 18436 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-09 17:08:37.546  INFO 18436 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-09 17:08:37.547  INFO 18436 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-09 17:08:37.572  INFO 18436 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 25ms
+2025-12-09 17:08:37.572  INFO 18436 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-09 17:08:37.595  INFO 18436 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-09 17:08:37.596  INFO 18436 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-09 17:08:37.596  INFO 18436 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-09 17:08:37.600  INFO 18436 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-09 17:08:37.601  INFO 18436 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-09 17:08:38.026  INFO 18436 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-09 17:08:38.026  INFO 18436 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-09 17:08:38.026  INFO 18436 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-09 17:08:38.027  INFO 18436 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-09 17:08:38.035  INFO 18436 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 1
+2025-12-09 17:08:38.035  INFO 18436 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-09 17:08:38.035  INFO 18436 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-09 17:08:38.173  INFO 18436 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-09 17:08:38.173  INFO 18436 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-09 17:08:38.173  INFO 18436 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-09 17:08:38.173  INFO 18436 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-09 17:08:38.174  INFO 18436 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 1
+2025-12-09 17:08:38.175  INFO 18436 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-09 17:08:38.175  INFO 18436 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-09 17:31:01.699  INFO 18436 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-09 17:31:01.705  INFO 18436 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-09 17:31:01.707  INFO 18436 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-09 17:31:01.707  INFO 18436 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2505183f]]
+2025-12-09 17:31:01.707  INFO 18436 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-09 17:31:01.711  INFO 18436 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09 17:31:01.713  INFO 18436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-09 17:31:01.730  INFO 18436 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
