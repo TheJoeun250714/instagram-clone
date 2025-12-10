@@ -95,8 +95,8 @@ const apiService = {
        return res.data;
     },
 
-    getPost: async (postId) => {
-        const res = await api.get('/posts/' + postId);
+    getPost: async (userId) => {
+        const res = await api.get('/posts/' + userId);
         return res.data;
     },
 
