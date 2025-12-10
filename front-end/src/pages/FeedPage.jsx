@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User} from 'lucide-react';
 import Header from "../components/Header";
-
+{/* heart 를 클릭하면 좋아요 수 증가 */}
 const FeedPage = () => {
     const [posts, setPosts] = useState([]);
 
@@ -72,7 +72,7 @@ const FeedPage = () => {
                             {stories.map((story) => (
                                 <div key={story.storyId}
                                      className="story-item"
-                                     onClick={() => navigate(`/story/detail/${story.storyId}`)}
+                                     onClick={() => navigate(`/story/detail/${story.userId}`)}
                                 >
                                     <div className="story-avatar-wrapper"
                                          key={story.id}>
