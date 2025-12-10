@@ -1,5 +1,5 @@
 import React from "react";
-import {ArrowLeft, Film, Home, MessageCircle, PlusSquare, User} from "lucide-react";
+import {ArrowLeft, Film, Home, MessageCircle, PlusSquare, Settings, User} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import apiService from "../service/apiService";
 
@@ -39,6 +39,7 @@ const Header = ({
                         <Film className="header-icon"
                               onClick={() => navigate("/story/upload")}/>
                         <User className="header-icon" onClick={() => navigate("/myfeed")}/>
+                        <Settings size={20} className="profile-settings-icon" />
                     </div>
                 </div>
             </header>

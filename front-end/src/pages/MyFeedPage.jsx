@@ -63,7 +63,7 @@ const MyFeedPage = () => {
                             <div className="profile-actions">
                                 <button className="profile-edit-btn">프로필 편집</button>
                                 <button className="profile-archive-btn">보관함 보기</button>
-                                <Settings size={20} className="profile-settings-icon" />
+
                             </div>
                         </div>
 
@@ -73,10 +73,7 @@ const MyFeedPage = () => {
                             <li>팔로잉 <strong>0</strong></li>
                         </ul>
 
-                        <div className="profile-bio-container">
-                            <div className="profile-fullname">{currentUser.userFullname}</div>
-                            <div className="profile-bio">{currentUser.userAvatar}</div>
-                        </div>
+
                     </div>
                 </header>
 

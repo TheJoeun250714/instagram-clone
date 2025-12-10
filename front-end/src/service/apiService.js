@@ -161,6 +161,11 @@ const apiService = {
         return res.data;
     },
 
+    getStory : async(userId) => {
+        const res = await api.get(`/stories/user/${userId}`);
+        return res.data;
+    },
+
     createStory: async (storyImage) => {
         const formData = new FormData();
         formData.append('storyImage', storyImage);

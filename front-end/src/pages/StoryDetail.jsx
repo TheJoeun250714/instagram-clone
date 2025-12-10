@@ -1,17 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import { X, MoreHorizontal, Heart, Send } from 'lucide-react';
-
+import apiService from "../service/apiService";
+// story 의 경우 상대방의 스토리를 다른 유저가 선택해서보는 것이 아니라
+// 유저가 올린 스토리를 오래된 순서부터 하나씩 보여짐 어떤 스토리와 스토리가 얼만큼 있는지
+// 유저 프로필을 클릭하지 않으면 알 수 없다.
 const StoryDetail = () => {
     const navigate = useNavigate();
     const [progress, setProgress] = useState(0);
+    const {userId} = useParams();
 
-    const storyData = {
-        username: "friend_user",
-        userImage: "https://via.placeholder.com/50",
-        storyImage: "https://picsum.photos/600/1000",
-        uploadedAt: "12시간"
-    };
+    // List -> {}
+    const [storyData, setStoryData] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+
+    // userId ->storyId
+    useEffect(() => {
+        loadStoryData()
+    },[userId]);
+
+    const loadStoryData = async () => {
+       try {
+            setLoading(true);
+            const data = await apiService.getStory(userId);
+            setStoryData(data);
+        } catch (err) {
+           alert('스토리를 불러오는데 실패했습니다.');
+           navigate('/feed');
+       }finally {
+           setLoading(false);
+       }
+    }
+
+
 
     useEffect(() => {
         const duration = 5000;
