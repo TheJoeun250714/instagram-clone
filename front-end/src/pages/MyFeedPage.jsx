@@ -11,8 +11,7 @@ const MyFeedPage = () => {
     const [activeTab, setActiveTab] = useState('posts');
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate() ;
-    const currentUser = JSON.parse(localStorage.getItem('user') || '{}');
-    const userId = currentUser.userId;
+
     useEffect(() => {
         loadMyFeedData();
     }, []);
@@ -21,17 +20,12 @@ const MyFeedPage = () => {
         setLoading(true);
         try {
 
+            const currentUser = JSON.parse(localStorage.getItem('user'));
+            const userId = currentUser.userId;
 
             if (!userId) return navigate('/login');
 
-            /*
-            불필요한 게시물을 모두 가져온 후 필터 작업을 진행해야하므로
-            나의 게시물만 가져오는 api를 이용하여 나의 게시물 피드 가져오도록 변경
-            // 전체 게시물 가져오기
-            const allPosts = await apiService.getPosts();
-            // 내 게시물만 필터링
-            const myPosts = allPosts.filter(post => post.userId !== userId);
-             */
+
             const allPosts = await apiService.getPost(userId);
             setPosts(allPosts);
             console.log(allPosts);
@@ -126,3 +120,12 @@ const MyFeedPage = () => {
 };
 
 export default MyFeedPage;
+
+/*
+불필요한 게시물을 모두 가져온 후 필터 작업을 진행해야하므로
+나의 게시물만 가져오는 api를 이용하여 나의 게시물 피드 가져오도록 변경
+// 전체 게시물 가져오기
+const allPosts = await apiService.getPosts();
+// 내 게시물만 필터링
+const myPosts = allPosts.filter(post => post.userId !== userId);
+ */

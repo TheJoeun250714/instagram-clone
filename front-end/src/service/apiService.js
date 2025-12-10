@@ -195,16 +195,25 @@ const apiService = {
     },
 
 
-    // TODO 2-2: updateProfile 함수 작성
-    // PUT /users/:userId
-    // 파라미터: userId, formData
-    // 헤더: 'Content-Type': 'multipart/form-data'
-    // 성공 시 localStorage의 'user' 업데이트
     updateProfile: async (userId, formData) => {
-        // TODO: API 호출을 완성하세요
-        // 1. api.put() 호출
-        // 2. res.data가 있으면 localStorage.setItem('user', JSON.stringify(res.data))
-        // 3. res.data 반환
+        try {
+            const res = await api.put("/auth/profile/edit",formData,{
+                headers: {
+                    "Content-Type":"multipart/form-data"
+                }
+            })
+            if(res.data){
+                localStorage.setItem('user', JSON.stringify(res.data));
+                const token = localStorage.getItem('token');
+                if(token){
+                    localStorage.setItem('token', token);
+                }
+            }
+            return res.data;
+        } catch (error) {
+            return Promise.reject(error);
+        }
+
     }
 };
 

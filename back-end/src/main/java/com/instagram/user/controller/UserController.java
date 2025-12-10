@@ -62,13 +62,14 @@ public class UserController {
 
     @PutMapping("/profile/edit")
     public ResponseEntity<User> editUserProfile(@RequestHeader("Authorization") String authHeader,
-                                                  @RequestPart User user,
-                                                  @RequestPart(required = false)MultipartFile userAvatar){
+                                                  @RequestPart("formData") User user,
+                                                  @RequestPart(value = "profileImage", required = false)MultipartFile userAvatar){
 
        try {
            String token = authHeader.substring(7);
            int userId = jwtUtil.getUserIdFromToken(token);
 
+           user.setUserId(userId);
             User u = userService.updateUser(user, userAvatar);
             return ResponseEntity.ok(u);
         } catch (Exception e) {
