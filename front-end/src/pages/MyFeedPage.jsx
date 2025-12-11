@@ -45,7 +45,7 @@ const MyFeedPage = () => {
                     <div className="profile-image-container">
                         <div className="profile-image-border">
                             <img
-                                src={getImageUrl(currentUser.userAvatar)}
+                                src={getImageUrl(user.userAvatar)}
                                 alt="profile"
                                 className="profile-image-large"
                             />
@@ -54,7 +54,7 @@ const MyFeedPage = () => {
 
                     <div className="profile-info-section">
                         <div className="profile-title-row">
-                            <h2 className="profile-username">{currentUser.userName}</h2>
+                            <h2 className="profile-username">{user.userName}</h2>
                             <div className="profile-actions">
                                 <button className="profile-edit-btn"
                                 onClick={
