@@ -9,28 +9,30 @@
 // - 입력값 검증 (이메일 형식, 사용자명 규칙, 비밀번호 길이)
 // ============================================
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const SignupPage = () => {
-    // TODO: username state를 선언하세요 (user_name)
-    const [username, setUsername] = useState('');
-
-    // TODO: email state를 선언하세요 (user_email)
-    const [email, setEmail] = useState('');
-
-    // TODO: password state를 선언하세요 (user_password)
-    const [password, setPassword] = useState('');
-
-    // TODO: fullName state를 선언하세요 (user_fullname)
-    const [fullName, setFullName] = useState('');
-
-    // TODO: loading state를 선언하세요
-    const [loading, setLoading] = useState(false);
-
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    const location = useLocation();
+    console.log("kakao email : ", location.state?.email);
+    console.log("kakao email : ", location.state);
     const navigate = useNavigate();
+
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [fullName, setFullName] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [isKakaoSignup, setIsKakaoSignup] = useState(false);
+
+    useEffect(() => {
+        if(location.state?.email) {
+            // 카카오에서 넘어온 정보로 email usernam fullname 작성하기
+        }
+    }, [location.state]);
+
+
 
     // TODO: handleSignup 함수를 작성하세요
     // 1. 입력값 검증 (모든 필드가 비어있는지 확인)

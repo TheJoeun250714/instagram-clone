@@ -36,8 +36,10 @@ const KakaoCallback = () => {
                 alert("가입되지 않은 회원입니다. 회원가입을 진행해주세요.");
                 navigate("/signup", {
                     state: {
-                        email: kakaoUser.email,
-                        name: kakaoUser.name,
+                        email: kakaoUser.userEmail,
+                        name: kakaoUser.userName,
+                        //  a:kakaoUser.email,
+                       // b:kakaoUser.email,
                     }
                 });
             }
