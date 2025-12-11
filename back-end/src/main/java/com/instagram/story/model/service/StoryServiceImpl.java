@@ -22,7 +22,7 @@ public class StoryServiceImpl implements StoryService {
 
     @Override
     public Story createStory(int userId, MultipartFile storyImage) throws IOException {
-        log.info("스토리 생성 시작 - 사용자 ID: {}",userId);
+        log.info("스토리 생성 시작 - 사용자 ID: {}", userId);
 
         Story story = new Story();
         story.setUserId(userId);
@@ -61,5 +61,41 @@ public class StoryServiceImpl implements StoryService {
     @Override
     public void deleteExpiredStories() {
 
+    }
+
+    @Override
+    public void deleteStory(int storyId) {
+        log.info("스토리 삭제 시작 - 스토리 ID : {}", storyId);
+
+        try {
+            Story story = storyMapper.selectStoryById(storyId);
+
+            if (story == null) {
+                log.warn("스토리를 찾을 수 없습니다. - 스토리 ID : {}", storyId);
+            }
+
+            if(story.getStoryImage() != null && !story.getStoryImage().isEmpty()){
+                boolean fileDeleted = fileUploadService.deleteFile(story.getStoryImage());
+                if(!fileDeleted){
+                    log.warn("스토리 이미지 파일 삭제 실패 : {}", story.getStoryImage());
+                } else {
+                    log.info("스토리 이미지 파일 삭제 완료 : {}", story.getStoryImage());
+                }
+            }
+            storyMapper.deleteStory(storyId);
+            log.info("스토리 DB 삭제 완료 - 스토리 ID : {}", storyId);
+
+            // 서버에서 이미지 파일 삭제
+            //if(story.)
+
+        } catch (Exception e) {
+            log.error("스토리 삭제 중 오류 발생 : {}", e.getMessage());
+            throw new RuntimeException("스토리 삭제 실패", e);
+        }
+    }
+
+    @Override
+    public List<Story> selectAllStoriesByUserId(int userId) {
+        return List.of();
     }
 }

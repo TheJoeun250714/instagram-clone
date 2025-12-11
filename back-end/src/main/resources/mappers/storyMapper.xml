@@ -20,6 +20,7 @@
         select story_id, user_id, story_image, created_at, expires_at, user_name, user_avatar
         from active_stories_view
     </select>
+
     <select id="selectStoriesByUserId" resultType="Story" parameterType="int">
         select story_id, user_id, story_image, created_at, expires_at, user_name, user_avatar
         from active_stories_view
@@ -28,10 +29,20 @@
     </select>
 
 
+    <select id="selectStoryById" resultType="Story" parameterType="int">
+        select story_id, user_id, story_image, created_at
+        from stories
+        where story_id = #{storyId}
+    </select>
+
     <update id="updateStoryImage" parameterType="Story">
         UPDATE stories
         SET story_image = #{storyImage}
         WHERE story_id = #{storyId}
     </update>
     <!-- 만료된 스토리는 삭제가 되는 것일까? 안보이고 보관처리가 되는 것일까 ?-->
+    <delete id="deleteStory" parameterType="int">
+        DELETE FROM stories
+        WHERE story_id = #{storyId}
+    </delete>
 </mapper>

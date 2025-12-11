@@ -127,15 +127,16 @@ const StoryDetail = () => {
     const handleDeleteStory = async () => {
         try {
             // deleteStory 에 현재스토리 스토리아이디 전달하여 스토리 삭제 sel delete 처리 하기
+            await apiService.deleteStory(currentStory.storyId);
             // controller deleteStory
 
             //삭제 후 스토리 목록에서 제거
-            const updateStories = stories.filter((_,index) => index !== currentIndex);
+            const updateStories = stories.filter((_, index) => index !== currentIndex);
             // 스토리 없을 경우
-            if(updateStories.length === 0){
-                // 마지막 스토리를 삭제한 경우 피드로 이동
+            if (updateStories.length === 0) {
+                navigate('/feed');
             } else {
-                if(currentIndex >= updateStories.length){
+                if (currentIndex >= updateStories.length) {
                     setCurrentIndex(updateStories.length - 1);
                 }
                 setStories(updateStories);
@@ -186,12 +187,19 @@ const StoryDetail = () => {
                         </span>
                     </div>
                     <div className="story-header-actions">
-                        <MoreHorizontal color="white"
-                                        className="story-icon"
-                         onClick={(e) => {
-                             e.stopPropagation();
-                             setShowDeleteModal(true);
-                         }}
+                        <MoreHorizontal
+                            color="white"
+                            className="story-icon"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setShowDeleteModal(true);
+                            }}
+                            style={{
+                                cursor: 'pointer',
+                                display: currentStory.userId === userId
+                                    ? 'block'
+                                    : 'none'
+                            }}
                         />
                         <X
                             color="white"
@@ -207,14 +215,14 @@ const StoryDetail = () => {
                 <img src={getImageUrl(currentStory.storyImage)}
                      alt="story"
                      className="story-main-image"/>
-                {currentIndex > 0 &&(
+                {currentIndex > 0 && (
                     <div className="story-nav-hint story-nev-left">
-                        <ChevronLeft color="white" size={32} />
+                        <ChevronLeft color="white" size={32}/>
                     </div>
                 )}
                 {currentIndex > stories.length - 1 && (
                     <div className="story-nav-hint story-nev-right">
-                        <ChevronRight color="white" size={32} />
+                        <ChevronRight color="white" size={32}/>
                     </div>
                 )}
 
