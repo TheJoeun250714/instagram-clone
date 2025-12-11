@@ -41,8 +41,8 @@ const KakaoCallback = () => {
                     }
                 });
             }
-        } catch
-            (err) {
+        } catch (err) {
+            console.log(err);
             alert("카카오 로그인 중 오류가 발생했습니다.");
             navigate("/login");
 
