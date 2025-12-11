@@ -25,10 +25,25 @@ const SignupPage = () => {
     const [fullName, setFullName] = useState('');
     const [loading, setLoading] = useState(false);
     const [isKakaoSignup, setIsKakaoSignup] = useState(false);
-
+    /*
+    TODO : 카카오에서 넘어온 정보로 email usernam fullname 작성하기
+     넘어온 정보가 존재한다면 disabled={isKakaoSignup} 이용하여 잠금설정하기
+        <input
+            className="login-input"
+            type="email"
+            placeholder="휴대폰 번호 또는 이메일 주소"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyPress={handleKeyPress}
+            autoComplete="email"
+        />
+     */
     useEffect(() => {
         if(location.state?.email) {
-            // 카카오에서 넘어온 정보로 email usernam fullname 작성하기
+            setEmail(location.state.email);
+            setUsername(location.state.name);
+            setFullName(location.state.fullName);
+            setIsKakaoSignup(true)
         }
     }, [location.state]);
 
@@ -136,6 +151,7 @@ const SignupPage = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         onKeyPress={handleKeyPress}
                         autoComplete="email"
+                        disabled={isKakaoSignup}
                         />
                         <input className="login-input"
                                type="text"
@@ -144,6 +160,7 @@ const SignupPage = () => {
                                onChange={(e) => setFullName(e.target.value)}
                                onKeyPress={handleKeyPress}
                                autoComplete="name"
+                               disabled={isKakaoSignup}
                         />
                         <input className="login-input"
                                type="text"
@@ -152,6 +169,7 @@ const SignupPage = () => {
                                onChange={(e) => setUsername(e.target.value)}
                                onKeyPress={handleKeyPress}
                                autoComplete="username"
+                               disabled={isKakaoSignup}
                         />
                         <input className="login-input"
                                 type="password"

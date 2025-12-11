@@ -2966,3 +2966,273 @@ This generated password is for development use only. Your security configuration
 2025-12-11 16:55:56.974  INFO 6264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
 2025-12-11 16:55:56.983  INFO 6264 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.457 seconds (process running for 14442.726)
 2025-12-11 16:55:56.985  INFO 6264 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:56:56.964  INFO 6264 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-11 16:58:17.437  INFO 6264 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 16:58:17.437  INFO 6264 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-11 16:58:17.442  INFO 6264 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-12-11 16:58:17.453  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:58:17.453  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ
+2025-12-11 16:58:17.453  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:58:17.454  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ]
+2025-12-11 16:58:17.455  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:58:17.455  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ
+2025-12-11 16:58:17.455  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:58:17.455  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ]
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 112ms
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [7sSIQQfRN1YNs6k9W7-aQMAj8Zpo4jEVAAAAAQoXFO4AAAGbDGr-As2yTeNnt1bO]
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 111ms
+2025-12-11 16:58:17.566  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.567  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 16:58:17.567  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 16:58:17.567  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [uLx8M7vtS2dkKw_b6eB-ATPtHCNgiY-1AAAAAQoXACcAAAGbDGr9_82yTeNnt1bO]
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 60ms
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.627  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 100ms
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:58:17.666  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 16:59:53.120  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:59:53.120  INFO 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ
+2025-12-11 16:59:53.120  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:59:53.120  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ]
+2025-12-11 16:59:53.167 ERROR 6264 --- [http-nio-9000-exec-3] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ","error_code":"KOE320"}"
+2025-12-11 16:59:53.168  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 48ms
+2025-12-11 16:59:53.168  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:53.168 ERROR 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 16:59:53.462  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:59:53.462  INFO 6264 --- [http-nio-9000-exec-4] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ
+2025-12-11 16:59:53.462  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:59:53.462  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ]
+2025-12-11 16:59:53.496 ERROR 6264 --- [http-nio-9000-exec-4] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=KeDh_Bq-W2oKiDy265GI5avN3dxkO_8pJUsrxt1jeEGD3xx648FSZwAAAAQKFxKWAAABmwxq-dbC3p98Pd5TpQ","error_code":"KOE320"}"
+2025-12-11 16:59:53.496  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 34ms
+2025-12-11 16:59:53.496  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:53.496 ERROR 6264 --- [http-nio-9000-exec-4] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 16:59:56.793  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:59:56.793  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ
+2025-12-11 16:59:56.793  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:59:56.793  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ]
+2025-12-11 16:59:56.793  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:59:56.794  INFO 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ
+2025-12-11 16:59:56.794  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:59:56.794  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ]
+2025-12-11 16:59:56.829 ERROR 6264 --- [http-nio-9000-exec-5] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ","error_code":"KOE320"}"
+2025-12-11 16:59:56.829  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 35ms
+2025-12-11 16:59:56.829  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:56.829 ERROR 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 16:59:56.858  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 65ms
+2025-12-11 16:59:56.859  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:56.859  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 16:59:56.859  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 16:59:56.859  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [yjNJW8Epv8uNqMBdZ1zsim7DIaFsGuNgAAAAAQoXEO8AAAGbDGyB3s2yTeNnt1bO]
+2025-12-11 16:59:56.936  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 77ms
+2025-12-11 16:59:56.936  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:56.936  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 16:59:56.937  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 16:59:56.937  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 16:59:56.937  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 16:59:56.937  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:59:56.937  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:00:06.600  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:06.600  INFO 6264 --- [http-nio-9000-exec-7] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ
+2025-12-11 17:00:06.600  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:06.600  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ]
+2025-12-11 17:00:06.672 ERROR 6264 --- [http-nio-9000-exec-7] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ","error_code":"KOE320"}"
+2025-12-11 17:00:06.672  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 72ms
+2025-12-11 17:00:06.672  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:06.672 ERROR 6264 --- [http-nio-9000-exec-7] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:06.760  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:06.760  INFO 6264 --- [http-nio-9000-exec-8] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ
+2025-12-11 17:00:06.760  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:06.760  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ]
+2025-12-11 17:00:06.807 ERROR 6264 --- [http-nio-9000-exec-8] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=a-b_QgRc3UMIWVDZJfbAQs9HB0bqrv-MlGJ91iaJg1WM31v6OObfkgAAAAQKFxDvAAABmwxsgI8p9hBbJybEWQ","error_code":"KOE320"}"
+2025-12-11 17:00:06.807  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 47ms
+2025-12-11 17:00:06.807  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:06.807 ERROR 6264 --- [http-nio-9000-exec-8] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:06.837  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:06.837  INFO 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA
+2025-12-11 17:00:06.837  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:06.837  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA]
+2025-12-11 17:00:06.865  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:06.865  INFO 6264 --- [http-nio-9000-exec-10] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA
+2025-12-11 17:00:06.865  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:06.865  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA]
+2025-12-11 17:00:06.876 ERROR 6264 --- [http-nio-9000-exec-9] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA","error_code":"KOE320"}"
+2025-12-11 17:00:06.876  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 39ms
+2025-12-11 17:00:06.876  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:06.876 ERROR 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:06.913 ERROR 6264 --- [http-nio-9000-exec-10] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=bZcafoi23KjNPLE0u-jx2gu_cnh6-Y-x88tJRoFgE8gRp0GvP7zI9QAAAAQKDRtZAAABmwxGH2-i-KZYUq23DA","error_code":"KOE320"}"
+2025-12-11 17:00:06.913  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 48ms
+2025-12-11 17:00:06.913  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:06.913 ERROR 6264 --- [http-nio-9000-exec-10] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:13.420  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:13.420  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: NrAyVdhCnI43JJg1LQu3GmISpMRG7DTO40EXsmNs7drv1u9i6_-7OgAAAAQKFxDvAAABmwxswgy2W8wW6V7rJg
+2025-12-11 17:00:13.420  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:13.420  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [NrAyVdhCnI43JJg1LQu3GmISpMRG7DTO40EXsmNs7drv1u9i6_-7OgAAAAQKFxDvAAABmwxswgy2W8wW6V7rJg]
+2025-12-11 17:00:13.421  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:13.421  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: NrAyVdhCnI43JJg1LQu3GmISpMRG7DTO40EXsmNs7drv1u9i6_-7OgAAAAQKFxDvAAABmwxswgy2W8wW6V7rJg
+2025-12-11 17:00:13.421  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:13.421  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [NrAyVdhCnI43JJg1LQu3GmISpMRG7DTO40EXsmNs7drv1u9i6_-7OgAAAAQKFxDvAAABmwxswgy2W8wW6V7rJg]
+2025-12-11 17:00:13.473 ERROR 6264 --- [http-nio-9000-exec-1] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=NrAyVdhCnI43JJg1LQu3GmISpMRG7DTO40EXsmNs7drv1u9i6_-7OgAAAAQKFxDvAAABmwxswgy2W8wW6V7rJg","error_code":"KOE320"}"
+2025-12-11 17:00:13.473  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 53ms
+2025-12-11 17:00:13.473  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:13.473 ERROR 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:13.503  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 81ms
+2025-12-11 17:00:13.503  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:13.503  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:00:13.503  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:00:13.503  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [Q8WeE_8ejq2NuzkX3YS-rYgOhDZ1M213AAAAAQoXFO4AAAGbDGzC5M2yTeNnt1bO]
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 77ms
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:13.580  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:00:21.186  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:21.186  INFO 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: uPYvC6xOnfP2UGM59vbip30PFdZ6eT5eGzy4JHJll2Wvritr1PlaXwAAAAQKFxDvAAABmwxs4GMFVMIyByjmyg
+2025-12-11 17:00:21.186  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:21.186  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [uPYvC6xOnfP2UGM59vbip30PFdZ6eT5eGzy4JHJll2Wvritr1PlaXwAAAAQKFxDvAAABmwxs4GMFVMIyByjmyg]
+2025-12-11 17:00:21.258  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 72ms
+2025-12-11 17:00:21.260  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:21.260  INFO 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:00:21.260  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:00:21.260  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [CTXZQyIMKSYfUMZEoheaF7JAQFvuDrGzAAAAAQoXIiAAAAGbDGzhLc2yTeNnt1bO]
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 61ms
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:21.321  INFO 6264 --- [http-nio-9000-exec-3] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:00:21.498  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:21.498  INFO 6264 --- [http-nio-9000-exec-4] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: uPYvC6xOnfP2UGM59vbip30PFdZ6eT5eGzy4JHJll2Wvritr1PlaXwAAAAQKFxDvAAABmwxs4GMFVMIyByjmyg
+2025-12-11 17:00:21.499  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:21.499  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [uPYvC6xOnfP2UGM59vbip30PFdZ6eT5eGzy4JHJll2Wvritr1PlaXwAAAAQKFxDvAAABmwxs4GMFVMIyByjmyg]
+2025-12-11 17:00:21.528 ERROR 6264 --- [http-nio-9000-exec-4] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=uPYvC6xOnfP2UGM59vbip30PFdZ6eT5eGzy4JHJll2Wvritr1PlaXwAAAAQKFxDvAAABmwxs4GMFVMIyByjmyg","error_code":"KOE320"}"
+2025-12-11 17:00:21.529  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 30ms
+2025-12-11 17:00:21.529  INFO 6264 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:21.529 ERROR 6264 --- [http-nio-9000-exec-4] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw]
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:00:34.462  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw]
+2025-12-11 17:00:34.528  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 66ms
+2025-12-11 17:00:34.529  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.529  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:00:34.529  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:00:34.529  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [uov3OjU8e510Xf-ou5U8SQ-gmHCxDirQAAAAAQoNFN0AAAGbDG0VCc2yTeNnt1bO]
+2025-12-11 17:00:34.530  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 68ms
+2025-12-11 17:00:34.530  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.530  INFO 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:00:34.530  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:00:34.530  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [Z8NBj0Dw0thW94up5Q6a_0uoSAy98H2QAAAAAQoNFdgAAAGbDG0VC82yTeNnt1bO]
+2025-12-11 17:00:34.602  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 72ms
+2025-12-11 17:00:34.602  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.602  INFO 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:00:34.602  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:00:34.602  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:00:34.603  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:00:34.603  INFO 6264 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.603  INFO 6264 --- [http-nio-9000-exec-5] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 80ms
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:00:34.609  INFO 6264 --- [http-nio-9000-exec-6] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:02:01.413  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:01.413  INFO 6264 --- [http-nio-9000-exec-7] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw
+2025-12-11 17:02:01.413  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:01.413  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw]
+2025-12-11 17:02:01.438  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:01.438  INFO 6264 --- [http-nio-9000-exec-8] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw
+2025-12-11 17:02:01.438  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:01.438  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw]
+2025-12-11 17:02:01.462 ERROR 6264 --- [http-nio-9000-exec-7] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw","error_code":"KOE320"}"
+2025-12-11 17:02:01.462  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 49ms
+2025-12-11 17:02:01.462  INFO 6264 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:01.462 ERROR 6264 --- [http-nio-9000-exec-7] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:02:01.478 ERROR 6264 --- [http-nio-9000-exec-8] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=1nv85lr-b_lIjiWhVwgw5CSEK9L9aHU7nD5NsDqz5SjALTomf_da0wAAAAQKFxDvAAABmwxtFEy37mS5Kc-sjw","error_code":"KOE320"}"
+2025-12-11 17:02:01.478  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 40ms
+2025-12-11 17:02:01.478  INFO 6264 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:01.478 ERROR 6264 --- [http-nio-9000-exec-8] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-10] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 8dHTn-UEendOzBRyDS78coCw6rndjA_lD0gcdjqDu_C6q6-ocHnXIwAAAAQKFxItAAABmwxufHlONYg--5I0Sw
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 8dHTn-UEendOzBRyDS78coCw6rndjA_lD0gcdjqDu_C6q6-ocHnXIwAAAAQKFxItAAABmwxufHlONYg--5I0Sw
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:06.773  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [8dHTn-UEendOzBRyDS78coCw6rndjA_lD0gcdjqDu_C6q6-ocHnXIwAAAAQKFxItAAABmwxufHlONYg--5I0Sw]
+2025-12-11 17:02:06.774  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:06.774  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [8dHTn-UEendOzBRyDS78coCw6rndjA_lD0gcdjqDu_C6q6-ocHnXIwAAAAQKFxItAAABmwxufHlONYg--5I0Sw]
+2025-12-11 17:02:06.813 ERROR 6264 --- [http-nio-9000-exec-10] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"authorization code not found for code=8dHTn-UEendOzBRyDS78coCw6rndjA_lD0gcdjqDu_C6q6-ocHnXIwAAAAQKFxItAAABmwxufHlONYg--5I0Sw","error_code":"KOE320"}"
+2025-12-11 17:02:06.813  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 39ms
+2025-12-11 17:02:06.813  INFO 6264 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:06.813 ERROR 6264 --- [http-nio-9000-exec-10] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 실패
+2025-12-11 17:02:06.827  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 53ms
+2025-12-11 17:02:06.827  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:06.827  INFO 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:02:06.827  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:02:06.827  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [pWPLGhpDPn1gAXiT4_I35kj_5rff1cb9AAAAAQoNFZsAAAGbDG59k82yTeNnt1bO]
+2025-12-11 17:02:06.918  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 91ms
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:06.919  INFO 6264 --- [http-nio-9000-exec-9] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: NbFABe3JMtb8uZDFfmI2gU-gNfjLSWt8cTSeYsybzw-ZkfJnnKv4MQAAAAQKFwYuAAABmwxvKRqBPKUF0hG4dQ
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: NbFABe3JMtb8uZDFfmI2gU-gNfjLSWt8cTSeYsybzw-ZkfJnnKv4MQAAAAQKFwYuAAABmwxvKRqBPKUF0hG4dQ
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [NbFABe3JMtb8uZDFfmI2gU-gNfjLSWt8cTSeYsybzw-ZkfJnnKv4MQAAAAQKFwYuAAABmwxvKRqBPKUF0hG4dQ]
+2025-12-11 17:02:50.882  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [NbFABe3JMtb8uZDFfmI2gU-gNfjLSWt8cTSeYsybzw-ZkfJnnKv4MQAAAAQKFwYuAAABmwxvKRqBPKUF0hG4dQ]
+2025-12-11 17:02:50.977  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 95ms
+2025-12-11 17:02:50.977  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:50.977  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:02:50.977  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:02:50.977  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [ZP7U54Yii0HNSAGUnw8k9q3hiKtqii0AAAAAAQoXEO8AAAGbDG8qAs2yTeNnt1bO]
+2025-12-11 17:02:50.992  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 110ms
+2025-12-11 17:02:50.992  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:50.992  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-11 17:02:50.992  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-11 17:02:50.992  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [cB9A-4IaIt8b6J194MfUwmQHoTVhnhZoAAAAAQoXFmIAAAGbDG8qBc2yTeNnt1bO]
+2025-12-11 17:02:51.057  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 65ms
+2025-12-11 17:02:51.057  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 80ms
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-11 17:02:51.058  INFO 6264 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
