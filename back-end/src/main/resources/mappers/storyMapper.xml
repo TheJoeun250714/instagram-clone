@@ -24,6 +24,7 @@
         select story_id, user_id, story_image, created_at, expires_at, user_name, user_avatar
         from active_stories_view
         where user_id = #{userId}
+        order by created_at asc
     </select>
 
 

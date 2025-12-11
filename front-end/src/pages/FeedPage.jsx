@@ -4,7 +4,9 @@ import apiService from '../service/apiService';
 import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User} from 'lucide-react';
 import Header from "../components/Header";
 import {getImageUrl} from "../service/commonService";
-{/* heart 를 클릭하면 좋아요 수 증가 */}
+
+{/* heart 를 클릭하면 좋아요 수 증가 */
+}
 const FeedPage = () => {
     const [posts, setPosts] = useState([]);
 
@@ -15,23 +17,25 @@ const FeedPage = () => {
     const navigate = useNavigate();
     useEffect(() => {
         loadFeedData();
-    },[]);
+    }, []);
 
     const loadFeedData = async () => {
-       setLoading(true);
+        setLoading(true);
 
-       try {
-           const postsData = await apiService.getPosts();
-           setPosts(postsData);
-       } catch (err) {
-           alert("포스트 피드를 불러오는데 실패했습니다.")
-       } finally {
-           setLoading(false);
-       }
+        try {
+            const postsData = await apiService.getPosts();
+            setPosts(postsData);
+        } catch (err) {
+            alert("포스트 피드를 불러오는데 실패했습니다.")
+        } finally {
+            setLoading(false);
+        }
 
         try {
             const storiesData = await apiService.getStories();
-            setStories(storiesData);
+            // 사용자 별로 스토리 그룹화
+            const gu = groupStoriesByUser(storiesData);
+            setStories(gu);
         } catch (err) {
             alert("스토리 피드를 불러오는데 실패했습니다.")
         } finally {
@@ -39,20 +43,43 @@ const FeedPage = () => {
         }
     };
 
+    // 사용자 별로 스토리를 그룹화하고 가장 최근 스토리만 반환
+    // select * from story 에서 가져온 모든 데이터를  storiesData 변수에 전달
+    const groupStoriesByUser = (storiesData) => {
+        const userStoriesMap = {}; // 추후 유저들을 그룹화해서 담을 변수 공간
+        // db에서 가져온 모든 스토리를 for 문으로 순회
+        storiesData.forEach(story => {
+            const userId = story.userId; // 각 스토리에 해당하는 유저 아이디를 변수이름에 담아
+            // 해당 사용자의 첫 스토리이거나, 더 최근 스토리인 경우 스토리 유저 나열 순서를 맨 앞으로 이동
+            // 정렬 = 알고리즘
+            if (!userStoriesMap[userId]
+                ||
+                new Date(story.createdAt) > new Date(userStoriesMap[userId].createdAt)
+            ) {
+                userStoriesMap[userId] = story;
+            }
+        });
+        // 위에서 그룹화한 userStoriesMap 유저들을 배열로 변환하고 최신순으로 정렬
+        // 정렬 = 알고리즘
+        return Object.values(userStoriesMap).sort((a, b) =>
+            new Date(b.createdAt) - new Date(a.createdAt)
+        );
+    }
+
     const toggleLike = async (postId, isLiked) => {
-         // 1. 현재 게시물 목록 복사 (원본을 바로 건드리면 안 됨)
+        // 1. 현재 게시물 목록 복사 (원본을 바로 건드리면 안 됨)
         const newPosts = [...posts];
 
         // 내가 클릭한 게시물이 몇 번째에 있는지 찾습니다.
         const targetIndex = newPosts.findIndex(post => post.postId === postId);
 
         // 게시물 찾았다면
-        if(targetIndex  !== -1) {
+        if (targetIndex !== -1) {
             // 좋아요 상태를 반대로 뒤집기(true -> false)
             newPosts[targetIndex].isLiked = !isLiked;
 
             // 숫자 취소 -1 차감
-            if(isLiked) newPosts[targetIndex].likeCount -= 1;
+            if (isLiked) newPosts[targetIndex].likeCount -= 1;
             // 숫자 추가 +1 추가
             else newPosts[targetIndex].likeCount += 1;
             // 변경된 상태로 화면 업그레이드
@@ -63,19 +90,19 @@ const FeedPage = () => {
         // 실패할경우 카운트 원상복구 후 소비자에게 전달
         try {
             // 좋아요 누르고 취소가 된다. 하지만 백그라운드에서 작업 바로 보이는 상황이 아님
-          if(isLiked) await  apiService.removeLike(postId);
-          else await  apiService.addLike(postId);
-        /*
-            기존에는 백엔드 -> 프론트엔드 변경했다면
-            수정내용은 프론트엔드 -> 백엔드 로직
-          const postsData = await apiService.getPosts();
-          setPosts(postsData);
+            if (isLiked) await apiService.removeLike(postId);
+            else await apiService.addLike(postId);
+            /*
+                기존에는 백엔드 -> 프론트엔드 변경했다면
+                수정내용은 프론트엔드 -> 백엔드 로직
+              const postsData = await apiService.getPosts();
+              setPosts(postsData);
 
-         */
-      } catch (err) {
-          alert("좋아요 처리에 실패했습니다.");
-          loadFeedData();// 다시 원래대로 돌려놓기
-      }
+             */
+        } catch (err) {
+            alert("좋아요 처리에 실패했습니다.");
+            loadFeedData();// 다시 원래대로 돌려놓기
+        }
     };
 
 
@@ -91,14 +118,14 @@ const FeedPage = () => {
 
     return (
         <div className="feed-container">
-        <Header />
+            <Header/>
 
             <div className="feed-content">
                 {stories.length > 0 && (
                     <div className="stories-container">
                         <div className="stories-wrapper">
                             {stories.map((story) => (
-                                <div key={story.storyId}
+                                <div key={story.userId}
                                      className="story-item"
                                      onClick={() => navigate(`/story/detail/${story.userId}`)}
                                 >
@@ -125,10 +152,10 @@ const FeedPage = () => {
                                     <img src={getImageUrl(post.userAvatar)} className="post-user-avatar"/>
                                     <span className="post-username">{post.userName}</span>
                                 </div>
-                                <MoreHorizontal className="post-more-icon" />
+                                <MoreHorizontal className="post-more-icon"/>
                             </div>
 
-                            <img src={post.postImage} className="post-image" />
+                            <img src={post.postImage} className="post-image"/>
                             <div className="post-content">
                                 <div className="post-actions">
                                     <div className="post-actions-left">
@@ -137,10 +164,10 @@ const FeedPage = () => {
                                             onClick={() => toggleLike(post.postId, post.isLiked)}
                                             fill={post.isLiked ? "#ed4956" : "none"}
                                         />
-                                        <MessageCircle className="action-icon" />
-                                        <Send className="action-icon" />
+                                        <MessageCircle className="action-icon"/>
+                                        <Send className="action-icon"/>
                                     </div>
-                                    <Bookmark className="action-icon" />
+                                    <Bookmark className="action-icon"/>
                                 </div>
 
                                 <div className="post-likes">
@@ -157,7 +184,7 @@ const FeedPage = () => {
                                     </button>
                                 )}
                                 <div className="post-time">
-                                    {post.createdAt ||'방금 전'}
+                                    {post.createdAt || '방금 전'}
                                 </div>
                             </div>
                         </article>

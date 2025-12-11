@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
-import { X, MoreHorizontal, Heart, Send } from 'lucide-react';
+import {X, MoreHorizontal, Heart, Send} from 'lucide-react';
 import apiService, {API_BASE_URL} from "../service/apiService";
 import {formatDate, getImageUrl} from "../service/commonService";
 
@@ -12,37 +12,62 @@ const StoryDetail = () => {
     const [progress, setProgress] = useState(0);
     const {userId} = useParams();
 
-    // List -> {}
-    const [storyData, setStoryData] = useState(null);
+    // setStories -> setStories
+    const [stories, setStories] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState('');
 
     // userId ->storyId
     useEffect(() => {
-        loadStoryData()
-    },[userId]);
+        loadstoryData()
+    }, [userId]);
 
 
-
-    const loadStoryData = async () => {
-       try {
+    const loadstoryData = async () => {
+        try {
             setLoading(true);
             const data = await apiService.getStory(userId);
             console.log(data);
-            setStoryData(data);
+
+            // 데이터가 배열이가 1개 이상일 때
+            if (Array.isArray(data) && data.length > 0) {
+                setStories(data);
+            } else {
+                navigate(`/feed`);
+            }
+
         } catch (err) {
-           alert('스토리를 불러오는데 실패했습니다.');
-           navigate('/feed');
-       }finally {
-           setLoading(false);
-       }
+            alert('스토리를 불러오는데 실패했습니다.');
+            navigate('/feed');
+        } finally {
+            setLoading(false);
+        }
     }
 
+    // 다음 스토리로 이동
+    const goToNextStory = () => {
+        if (currentIndex < stories.length - 1) {
+            setCurrentIndex(prev => prev + 1);
+            setProgress(0);
+        } else { //마지막 스토리면 창 닫고 피드로 이동 -> 다음 유저 스토리 보기
+            navigate("/feed");
+        }
+    }
+    // 이전 스토리로 이동 현재 번호에서 -1씩 감소
+    const goToPrevStory = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+            setProgress(0); // 다음 게시물로 넘어가거나 이전 게시물로 넘어가면 프로그래스바 처음부터 시작!
+        } else {
+            navigate("/feed");
+        }
+    }
 
 
     useEffect(() => {
 
-        if(!storyData) return;
+        if (!stories.length) return;
 
         const duration = 5000;
         const intervalTime = 50;
@@ -51,43 +76,82 @@ const StoryDetail = () => {
             setProgress(prev => {
                 if (prev >= 100) {
                     clearInterval(timer);
-                    navigate(-1);
-                    return 100;
+                    goToNextStory(); // 다음 스토리 넘어가기
+                    return 0; // 다음 스토리로 넘어갈 때 프로그래스바를 처음부터 다시 시작
                 }
                 return prev + (100 / (duration / intervalTime));
             });
         }, intervalTime);
 
         return () => clearInterval(timer);
-    }, [navigate]);
+        //  현재 바라보고 있는 페이지 번호 변경되거나, 배열이 추가될 때 감지
+    }, [currentIndex, stories]);
 
+    // 화면 클릭으로 이전 / 다음 이동
+    /*
+    화면 전체 너비 screenWidth 300
+    왼쪽 1/3 구간
+    0  ~ 100
+    0 ~ screenWidth / 3
 
-    if(loading) return <div>로딩중</div>;
+    가운데
+    100              ~    200
+    screenWidth / 3      (screenWidth / 3) * 2
+
+    오른쪽 1/3 구간
+    200                          ~ 300
+     (screenWidth / 3) * 2        screenWidth
+     */
+    const handleScreenClick = (e) => {
+        // 위쪽이나 아래쪽 클릭의 경우 상 하 y좌표 기준으로 클릭한다
+        // 왼쪽이나 오른쪽 클릭의 경우 좌 우 x좌표 기준으로 클릭한다
+        const clickX = e.clientX;
+        const screenWidth = window.innerWidth;
+
+        if (clickX < screenWidth / 3) {
+            // x좌표 기준으로 왼쪽 1/3 정도의 가로를 클릭하면 - 이전 페이지
+            goToPrevStory();
+            //      사용자클릭이 전체 가로 너비 300 기준 200 이상 클릭했을 때
+        } else if (clickX > (screenWidth * 2) / 3) {
+            goToNextStory();
+        }
+    }
+
+    if (loading) return <div>로딩중</div>;
 
     return (
-        <div className="story-viewer-container">
+        <div className="story-viewer-container" onClick={handleScreenClick}> {/* 스토리 전체 화면에서 클릭이 일어날 수 있다. */}
             <div
                 className="story-bg-blur"
-                style={{backgroundImage: `url(${getImageUrl(storyData.storyImage)})`}}
+                style={{backgroundImage: `url(${getImageUrl(stories.storyImage)})`}}
             />
 
             <div className="story-content-box">
                 <div className="story-progress-wrapper">
-                    <div className="story-progress-bar">
-                        <div className="story-progress-fill"
-                             style={{width: `${progress}%`}}></div>
-                    </div>
+                    {stories.map((_, index) => (
+                        <div key={index} className="story-progress-bar">
+                            <div className="story-progress-fill"
+                                 style={{
+                                     width: index < currentIndex
+                                         ? '100%'
+                                         : index === currentIndex
+                                             ? `${progress}%`
+                                             : '0%'
+                                 }}>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 <div className="story-header-info">
                     <div className="story-user">
-                        <img src={getImageUrl(storyData.userImage)} alt="user"
-                             className="story-user-avatar" />
+                        <img src={getImageUrl(stories.userImage)} alt="user"
+                             className="story-user-avatar"/>
                         <span className="story-username">
-                            {storyData.userName}
+                            {stories.userName}
                         </span>
                         <span className="story-time">
-                            {formatDate(storyData.createdAt, 'relative')}
+                            {formatDate(stories.createdAt, 'relative')}
                         </span>
                     </div>
                     <div className="story-header-actions">
@@ -101,9 +165,9 @@ const StoryDetail = () => {
                     </div>
                 </div>
 
-                <img src={getImageUrl(storyData.storyImage)}
+                <img src={getImageUrl(stories.storyImage)}
                      alt="story"
-                     className="story-main-image" />
+                     className="story-main-image"/>
 
                 <div className="story-footer">
                     <div className="story-input-container">
@@ -114,9 +178,9 @@ const StoryDetail = () => {
                         />
                     </div>
                     <Heart color="white"
-                           className="story-icon" />
+                           className="story-icon"/>
                     <Send color="white"
-                          className="story-icon" />
+                          className="story-icon"/>
                 </div>
             </div>
         </div>
