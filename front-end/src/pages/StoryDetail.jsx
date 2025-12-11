@@ -17,6 +17,8 @@ const StoryDetail = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState('');
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+
 
     // userId ->storyId
     useEffect(() => {
@@ -122,6 +124,30 @@ const StoryDetail = () => {
     // 현재 스토리에 따른 유저정보아 스토리 아이디
     const currentStory = stories[currentIndex];
 
+    const handleDeleteStory = async () => {
+        try {
+            // deleteStory 에 현재스토리 스토리아이디 전달하여 스토리 삭제 sel delete 처리 하기
+            // controller deleteStory
+
+            //삭제 후 스토리 목록에서 제거
+            const updateStories = stories.filter((_,index) => index !== currentIndex);
+            // 스토리 없을 경우
+            if(updateStories.length === 0){
+                // 마지막 스토리를 삭제한 경우 피드로 이동
+            } else {
+                if(currentIndex >= updateStories.length){
+                    setCurrentIndex(updateStories.length - 1);
+                }
+                setStories(updateStories);
+                setProgress(0);
+            }
+            setShowDeleteModal(false);
+        } catch (err) {
+            alert("스토리 삭제에 실패했습니다.");
+            console.error(err.message);
+        }
+    }
+
     return (
         <div className="story-viewer-container" onClick={handleScreenClick}> {/* 스토리 전체 화면에서 클릭이 일어날 수 있다. */}
             <div
@@ -162,7 +188,10 @@ const StoryDetail = () => {
                     <div className="story-header-actions">
                         <MoreHorizontal color="white"
                                         className="story-icon"
-                         onClick={(e) => e.stopPropagation()}
+                         onClick={(e) => {
+                             e.stopPropagation();
+                             setShowDeleteModal(true);
+                         }}
                         />
                         <X
                             color="white"
@@ -203,10 +232,40 @@ const StoryDetail = () => {
                           className="story-icon"/>
                 </div>
 
-                <div className="story-counter">
-                    {currentIndex + 1} / {stories.length}
-                </div>
             </div>
+            {showDeleteModal && (
+                <div
+                    className="story-delete-modal-overlay"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        setShowDeleteModal(false);
+                    }}
+                >
+                    <div
+                        className="story-delete-modal"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="story-delete-button story-delete-confirm"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteStory();
+                            }}
+                        >
+                            스토리 삭제
+                        </button>
+                        <button
+                            className="story-delete-button story-delete-cancel"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setShowDeleteModal(false);
+                            }}
+                        >
+                            취소
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
