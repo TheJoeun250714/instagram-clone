@@ -14,7 +14,7 @@ const api = axios.create({
 api.interceptors.request.use(
     config => {
         const token = localStorage.getItem('token');
-        if(token){
+        if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
         return config;
@@ -40,7 +40,7 @@ api.interceptors.response.use(
         return response;
     },
     error => {
-        if(error.response && error.response.status === 401){
+        if (error.response && error.response.status === 401) {
             localStorage.removeItem('token');
             localStorage.removeItem('user');
             window.location.href = '/login';
@@ -75,7 +75,7 @@ const apiService = {
         });
 
         // 토큰과 사용자 정보를 localStorage 저장
-        if(res.data.token) {
+        if (res.data.token) {
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('user', JSON.stringify(res.data.user));
         }
@@ -91,8 +91,8 @@ const apiService = {
     // ===== 게시물 API =====
 
     getPosts: async () => {
-       const res = await api.get('/posts');
-       return res.data;
+        const res = await api.get('/posts');
+        return res.data;
     },
 
     getPost: async (userId) => {
@@ -105,7 +105,7 @@ const apiService = {
         formData.append('postImage', postImage);
         formData.append('postCaption', postCaption);
         formData.append('postLocation', postLocation);
-        const res = await  api.post("/posts", formData, {
+        const res = await api.post("/posts", formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -124,8 +124,8 @@ const apiService = {
     // TODO: 좋아요 추가
     // POST /posts/:postId/like
     addLike: async (postId) => {
-       const res = await api.post(`/posts/${postId}/like`);
-       return res.data;
+        const res = await api.post(`/posts/${postId}/like`);
+        return res.data;
     },
 
     // TODO: 좋아요 취소
@@ -163,9 +163,13 @@ const apiService = {
         return res.data;
     },
 
-    getStory : async(userId) => {
-        const res = await api.get(`/stories/user/${userId}`);
-        return res.data;
+    getStory: async (userId) => {
+        try {
+            const res = await api.get(`/stories/user/${userId}`);
+            return res.data;
+        } catch (err) {
+            console.error("스토리 조회 에러 : ", err.response?.data || err.message);
+        }
     },
 
     createStory: async (storyImage) => {
@@ -197,15 +201,15 @@ const apiService = {
 
     updateProfile: async (userId, formData) => {
         try {
-            const res = await api.put("/auth/profile/edit",formData,{
+            const res = await api.put("/auth/profile/edit", formData, {
                 headers: {
-                    "Content-Type":"multipart/form-data"
+                    "Content-Type": "multipart/form-data"
                 }
             })
-            if(res.data){
+            if (res.data) {
                 localStorage.setItem('user', JSON.stringify(res.data));
                 const token = localStorage.getItem('token');
-                if(token){
+                if (token) {
                     localStorage.setItem('token', token);
                 }
             }
