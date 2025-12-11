@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
-import {X, MoreHorizontal, Heart, Send} from 'lucide-react';
+import {X, MoreHorizontal, Heart, Send, ChevronLeft, ChevronRight} from 'lucide-react';
 import apiService, {API_BASE_URL} from "../service/apiService";
 import {formatDate, getImageUrl} from "../service/commonService";
 
@@ -119,11 +119,14 @@ const StoryDetail = () => {
 
     if (loading) return <div>로딩중</div>;
 
+    // 현재 스토리에 따른 유저정보아 스토리 아이디
+    const currentStory = stories[currentIndex];
+
     return (
         <div className="story-viewer-container" onClick={handleScreenClick}> {/* 스토리 전체 화면에서 클릭이 일어날 수 있다. */}
             <div
                 className="story-bg-blur"
-                style={{backgroundImage: `url(${getImageUrl(stories.storyImage)})`}}
+                style={{backgroundImage: `url(${getImageUrl(currentStory.storyImage)})`}}
             />
 
             <div className="story-content-box">
@@ -145,29 +148,46 @@ const StoryDetail = () => {
 
                 <div className="story-header-info">
                     <div className="story-user">
-                        <img src={getImageUrl(stories.userImage)} alt="user"
-                             className="story-user-avatar"/>
+                        <img src={getImageUrl(currentStory.userAvatar)}
+                             alt="user"
+                             className="story-user-avatar"
+                        />
                         <span className="story-username">
-                            {stories.userName}
+                            {currentStory.userName}
                         </span>
                         <span className="story-time">
-                            {formatDate(stories.createdAt, 'relative')}
+                            {formatDate(currentStory.createdAt, 'relative')}
                         </span>
                     </div>
                     <div className="story-header-actions">
                         <MoreHorizontal color="white"
-                                        className="story-icon"/>
+                                        className="story-icon"
+                         onClick={(e) => e.stopPropagation()}
+                        />
                         <X
                             color="white"
                             className="story-icon"
-                            onClick={() => navigate(-1)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                navigate(-1);
+                            }}
                         />
                     </div>
                 </div>
 
-                <img src={getImageUrl(stories.storyImage)}
+                <img src={getImageUrl(currentStory.storyImage)}
                      alt="story"
                      className="story-main-image"/>
+                {currentIndex > 0 &&(
+                    <div className="story-nav-hint story-nev-left">
+                        <ChevronLeft color="white" size={32} />
+                    </div>
+                )}
+                {currentIndex > stories.length - 1 && (
+                    <div className="story-nav-hint story-nev-right">
+                        <ChevronRight color="white" size={32} />
+                    </div>
+                )}
 
                 <div className="story-footer">
                     <div className="story-input-container">
@@ -181,6 +201,10 @@ const StoryDetail = () => {
                            className="story-icon"/>
                     <Send color="white"
                           className="story-icon"/>
+                </div>
+
+                <div className="story-counter">
+                    {currentIndex + 1} / {stories.length}
                 </div>
             </div>
         </div>
