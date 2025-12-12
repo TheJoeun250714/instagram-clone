@@ -225,26 +225,26 @@ const apiService = {
 
     },
     searchUsers: async (query) => {
-        // 요구사항:
-        // 1. query가 없으면 빈 배열 반환
-        // 2. api.get()을 사용하여 `/users/search?q=${query}` 호출
-        // 3. 성공 시 res.data 반환
-        // 4. 에러 발생 시 콘솔에 로그 출력 후 빈 배열 반환
+        try {
+            const res = await api.get(`/users/search?q=${query}`);
+            return res.data;
+        } catch (err) {
+            console.error("유저 검색 실패",err);
+            return [];
+        }
 
-        // 여기에 코드 작성
+        // q=${encodeURIComponent(query)
 
     },
 
-    // TODO 2: 유저네임으로 유저 조회 API 호출 함수 구현
-    // GET /api/users/username/{username}
     getUserByUsername: async (username) => {
-        // 요구사항:
-        // 1. api.get()을 사용하여 `/users/username/${username}` 호출
-        // 2. 성공 시 res.data 반환
-        // 3. 에러 발생 시 콘솔에 로그 출력 후 null 반환
-
-        // 여기에 코드 작성
-
+        try {
+            const res = await api.get(`/users/username/${username}`);
+            return res.data;
+        }catch(err) {
+            console.error("유저 조회 실패",err);
+            return null;
+        }
     }
 };
 

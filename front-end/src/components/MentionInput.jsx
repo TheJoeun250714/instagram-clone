@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import apiService from '../service/apiService';
+import {getImageUrl} from "../service/commonService";
 
 const MentionInput = ({value, onChange, placeholder, rows = 4}) => {
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -10,7 +11,9 @@ const MentionInput = ({value, onChange, placeholder, rows = 4}) => {
     const suggestionsRef = useRef(null);
 
     const searchUsers = async (query) => {
+        console.log("검색시작 : ",query);
         if (!query || query.length < 1) {
+            console.log("쿼리가 비어있어요.");
             setSuggestions([]);
             return;
         }
@@ -74,20 +77,9 @@ const MentionInput = ({value, onChange, placeholder, rows = 4}) => {
         }
 
 
-        // 여기에 코드 작성
-
     };
 
-    // TODO 6: 키보드 이벤트 처리 함수 구현
     const handleKeyDown = (e) => {
-        // 요구사항:
-
-        // 2. ArrowDown: selectedIndex 증가 (마지막이면 0으로)
-        // 3. ArrowUp: selectedIndex 감소 (0이면 마지막으로)
-        // 4. Enter: 현재 선택된 유저로 selectUser 호출
-        // 5. Escape: setShowSuggestions(false)
-        // 6. 각 케이스에서 e.preventDefault() 호출
-        // 1. showSuggestions가 false이거나 suggestions가 비어있으면 종료
         if (!showSuggestions || suggestions.length === 0) return;
 
         switch (e.key) {
@@ -151,7 +143,7 @@ const MentionInput = ({value, onChange, placeholder, rows = 4}) => {
                             onMouseEnter={() => setSelectedIndex(index)}
                         >
                             <img
-                                src={user.userAvatar || '/static/img/default-avatar.jpg'}
+                                src={getImageUrl(user.userAvatar)}
                                 alt={user.userName}
                                 className="mention-avatar"
                             />
