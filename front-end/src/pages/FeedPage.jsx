@@ -147,13 +147,7 @@ const FeedPage = () => {
                                 <div className="post-caption">
                                     <span className="post-caption-username">{post.userName}</span>
                                     <MentionText  text={post.postCaption}/>
-                                    {/*
-                                        요구사항:
-                                        1. 기존 {post.postCaption} 주석 처리
-                                        2. <MentionText text={post.postCaption} /> 사용
 
-                                    {post.postCaption}
-                                    */}
                                 </div>
 
                                 {post.commentCount > 0 && (
