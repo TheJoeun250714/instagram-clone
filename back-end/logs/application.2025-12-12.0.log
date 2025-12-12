@@ -1777,3 +1777,206 @@ This generated password is for development use only. Your security configuration
 2025-12-12 16:01:16.697  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [ab]
 2025-12-12 16:01:16.699  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
 2025-12-12 16:01:16.699  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:02.024  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:02.025  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:02.025  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [ㅁ]
+2025-12-12 16:13:02.027  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:13:02.027  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:03.219  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:03.219  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:03.219  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [a]
+2025-12-12 16:13:03.222  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:13:03.222  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:03.662  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:03.662  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:03.662  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [av]
+2025-12-12 16:13:03.663  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-12 16:13:03.664  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:04.415  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:04.415  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:04.415  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [a]
+2025-12-12 16:13:04.417  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:13:04.417  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:04.593  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:04.593  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:04.593  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [ab]
+2025-12-12 16:13:04.595  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:13:04.595  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:09.749  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:09.749  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:09.749  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [undefined]
+2025-12-12 16:13:09.750  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:09.750  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.236  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.237  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.237  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [undefine]
+2025-12-12 16:13:10.238  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.239  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.274  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.274  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.274  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [undefin]
+2025-12-12 16:13:10.275  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.275  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.345  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.345  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.345  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.346  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.346  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [undefi]
+2025-12-12 16:13:10.346  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [undef]
+2025-12-12 16:13:10.347  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.347  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.351  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 5ms
+2025-12-12 16:13:10.352  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.376  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.377  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.377  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [unde]
+2025-12-12 16:13:10.378  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.378  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.409  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.409  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.409  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [und]
+2025-12-12 16:13:10.410  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.410  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.458  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.459  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.459  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [un]
+2025-12-12 16:13:10.461  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:13:10.461  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:10.472  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:10.472  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:10.473  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [u]
+2025-12-12 16:13:10.475  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:10.475  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:11.549  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:11.549  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:11.549  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [a]
+2025-12-12 16:13:11.550  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:13:11.551  INFO 22860 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:13:11.972  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:13:11.972  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:13:11.972  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [ab]
+2025-12-12 16:13:11.974  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:13:11.974  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:20:16.484  INFO 22860 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-12-12 16:21:00.060  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:00.062  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:21:00.062  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:21:00.077  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 15ms
+2025-12-12 16:21:00.078  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:00.089  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:00.090  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:21:00.090  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:21:00.094  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-12 16:21:00.094  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:00.100  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:00.100  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:21:00.100  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:21:00.100  INFO 22860 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:21:00.105  INFO 22860 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:21:00.105  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 5ms
+2025-12-12 16:21:00.105  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:00.124  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:00.124  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:21:00.124  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:21:00.124  INFO 22860 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:21:00.126  INFO 22860 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:21:00.126  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:21:00.126  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:05.867  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:05.868  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:21:05.869  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:21:05.872  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:21:05.872  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:05.877  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:05.878  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:21:05.878  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:21:05.880  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:05.889  INFO 22860 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:21:05.889  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-12 16:21:05.889  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:21:05.910  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:21:05.911  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:21:05.911  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:21:05.911  INFO 22860 --- [http-nio-9000-exec-5] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:21:05.913  INFO 22860 --- [http-nio-9000-exec-5] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:21:05.913  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:21:05.913  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:46.167  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:46.167  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:24:46.167  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [a]
+2025-12-12 16:24:46.169  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:24:46.170  INFO 22860 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:46.472  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:46.472  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-12 16:24:46.472  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [ab]
+2025-12-12 16:24:46.475  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:24:46.475  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:53.956  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.createPost()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:53.957  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.createPost() 서비스 호출 ==========
+2025-12-12 16:24:53.957  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@2ae0de5a, @abc  친구와 피자 한판! 친구야 @abc , 피자나라, 1]
+2025-12-12 16:24:53.968  INFO 22860 --- [http-nio-9000-exec-5] c.i.common.util.FileUploadService        : 게시물 이미지 업로드 성공: 불고기피자.png -> 0090fcab-b350-416c-9304-38f2570a0918.png
+2025-12-12 16:24:53.977  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 20ms
+2025-12-12 16:24:53.977  INFO 22860 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:54.948  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:54.949  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:24:54.949  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:24:54.951  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:24:54.951  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:54.957  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:54.964  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:24:54.964  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:24:54.967  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:24:54.967  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:54.969  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:54.969  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:24:54.969  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:24:54.969  INFO 22860 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:24:54.971  INFO 22860 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:24:54.971  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:24:54.972  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:24:55.086  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:24:55.086  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:24:55.086  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:24:55.087  INFO 22860 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:24:55.088  INFO 22860 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:24:55.088  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:24:55.088  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:07.118  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:07.119  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:47:07.119  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:47:07.123  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-12 16:47:07.123  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:07.169  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:07.173  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-12 16:47:07.173  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-12 16:47:07.176  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:47:07.176  INFO 22860 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:07.217  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:07.218  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:47:07.218  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:47:07.218  INFO 22860 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:47:07.219  INFO 22860 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:47:07.219  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:47:07.219  INFO 22860 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:08.199  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:08.199  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-12 16:47:08.199  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-12 16:47:08.199  INFO 22860 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-12 16:47:08.200  INFO 22860 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-12 16:47:08.200  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-12 16:47:08.200  INFO 22860 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:09.771  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserSearchController.getUserByUsername()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:09.772  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByUsername() 서비스 호출 ==========
+2025-12-12 16:47:09.772  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [abc]
+2025-12-12 16:47:09.775  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-12 16:47:09.775  INFO 22860 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-12 16:47:11.022  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserSearchController.getUserByUsername()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-12 16:47:11.022  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByUsername() 서비스 호출 ==========
+2025-12-12 16:47:11.022  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [abc]
+2025-12-12 16:47:11.024  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-12 16:47:11.024  INFO 22860 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================

@@ -1,60 +1,39 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
-const MentionText = ({ text, className = '' }) => {
+const MentionText = ({text, className = ''}) => {
     const navigate = useNavigate();
-
-    // TODO 8: 멘션 파싱 함수 구현
     const parseMentions = (text) => {
-
-        // 요구사항:
-        // 1. text가 없으면 빈 배열 반환
-        // 2. 정규표현식 /@(\w+)/g 를 사용하여 @유저네임 패턴 찾기
-        // 3. parts 배열에 { type: 'text', content: '...' } 또는
-        //    { type: 'mention', content: '@username', username: 'username' } 형태로 저장
-        // 4. while 루프와 regex.exec() 사용
-        // 5. 마지막 남은 텍스트도 parts에 추가
-
         if (!text) return [];
-
         const mentionRegex = /@(\w+)/g;
         const parts = [];
         let lastIndex = 0;
         let match;
-
-        // 여기에 코드 작성
-        // 힌트: while ((match = mentionRegex.exec(text)) !== null) { ... }
-        while((match = mentionRegex.exec(text)) !== null){
-
-            // @  이전 일반 텍스트
-            if(match.index >lastIndex){
+        while ((match = mentionRegex.exec(text)) !== null) {
+            if (match.index > lastIndex) {
                 parts.push({
                     type: 'text',
                     content: text.substring(lastIndex, match.index),
                 });
             }
-
-            // 멘션 부분
             parts.push({
-                type:'mention',
-                content:match[0], // @username
+                type: 'mention',
+                content: match[0], // @username
                 username: match[1], //username
             });
             lastIndex = match.index + match[0].length;
         }
 
-        // 멘션 이후 남은 텍스트들은 기본 텍스트형태 유지
-        if(lastIndex<text.length){
+        if (lastIndex < text.length) {
             parts.push({
                 type: 'text',
-                content:text.substring(lastIndex)
+                content: text.substring(lastIndex)
             });
         }
         return parts;
     };
 
-    // TODO 9: 멘션 클릭 핸들러 구현
     const handleMentionClick = async (username, e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -63,8 +42,8 @@ const MentionText = ({ text, className = '' }) => {
             if (u && u.userId) {
                 navigate(`/myfeed?userId=${u.userId}`);
             }
-        }catch (e){
-            console.error('유저 찾기 실패 : ',e);
+        } catch (e) {
+            console.error('유저 찾기 실패 : ', e);
         }
 
     };
@@ -76,18 +55,47 @@ const MentionText = ({ text, className = '' }) => {
             {parts.map((part, index) => {
                 if (part.type === 'mention') {
                     return (
+                        <>
                         <span
                             key={index}
                             className="mention-link"
-                            onClick={(e) => handleMentionClick(part.username, e)}
+                            onClick={
+                                (e) => handleMentionClick(part.username, e)
+                            }
                             style={{
                                 color: '#0095f6',
                                 cursor: 'pointer',
                                 fontWeight: 600
-                            }}
-                        >
+                            }}>
+                            {part.type}
+                        </span>
+                            <span
+                                key={index}
+                                className="mention-link"
+                                onClick={
+                                    (e) => handleMentionClick(part.username, e)
+                                }
+                                style={{
+                                    color: '#0095f6',
+                                    cursor: 'pointer',
+                                    fontWeight: 600
+                                }}>
                             {part.content}
                         </span>
+                            <span
+                                key={index}
+                                className="mention-link"
+                                onClick={
+                                    (e) => handleMentionClick(part.username, e)
+                                }
+                                style={{
+                                    color: '#0095f6',
+                                    cursor: 'pointer',
+                                    fontWeight: 600
+                                }}>
+                            {part.username}
+                        </span>
+                        </>
                     );
                 }
                 return <span key={index}>{part.content}</span>;
