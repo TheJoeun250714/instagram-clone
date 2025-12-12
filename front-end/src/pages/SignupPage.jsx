@@ -24,20 +24,9 @@ const SignupPage = () => {
     const [password, setPassword] = useState('');
     const [fullName, setFullName] = useState('');
     const [loading, setLoading] = useState(false);
+
     const [isKakaoSignup, setIsKakaoSignup] = useState(false);
-    /*
-    TODO : 카카오에서 넘어온 정보로 email usernam fullname 작성하기
-     넘어온 정보가 존재한다면 disabled={isKakaoSignup} 이용하여 잠금설정하기
-        <input
-            className="login-input"
-            type="email"
-            placeholder="휴대폰 번호 또는 이메일 주소"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onKeyPress={handleKeyPress}
-            autoComplete="email"
-        />
-     */
+
     useEffect(() => {
         if(location.state?.email) {
             setEmail(location.state.email);

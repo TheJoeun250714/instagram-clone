@@ -24,7 +24,6 @@ const KakaoCallback = () => {
 
             if (res.status === 200) {
                 // 1.이미 가입된 회원 -> 로그인 성공처리
-
                 const {token, user} = res.data;
                 localStorage.setItem("token", token);
                 localStorage.setItem("user", JSON.stringify(user));
