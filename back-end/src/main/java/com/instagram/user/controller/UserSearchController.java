@@ -24,15 +24,14 @@ public class UserSearchController {
     @GetMapping("/search")
     public ResponseEntity<List<User>> searchUsers(@RequestParam("q") String query) {
         try {
-            userService.searchUsers(query);
-            return ResponseEntity.ok().build();
+            List<User> u = userService.searchUsers(query);
+            return ResponseEntity.ok(u); // 200 header ~ body
         } catch (Exception e) {
             log.error("유저 검색 실패: {}",e.getMessage());
             return ResponseEntity.status(500).body(new ArrayList<>());
         }
     }
 
-    // TODO 10: 유저네임으로 조회 API
     @GetMapping("/username/{userName}")
     public ResponseEntity<User> getUserByUsername(@PathVariable String userName) {
 
@@ -41,7 +40,7 @@ public class UserSearchController {
             if (u == null) {
                 return ResponseEntity.notFound().build();
             }
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(u);
 
         } catch (Exception e) {
             log.error("유저 조회 실패: {}",e.getMessage());

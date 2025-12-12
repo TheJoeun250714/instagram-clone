@@ -56,7 +56,7 @@
     </select>
 
     <select id="selectUserByUserNameExact" parameterType="String" resultType="User">
-        SELECT  *
+        SELECT  user_name, user_id, user_email, user_fullname, user_avatar
         FROM users
         WHERE user_name = #{userName}
     </select>
