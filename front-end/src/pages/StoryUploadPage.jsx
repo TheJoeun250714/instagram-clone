@@ -12,7 +12,6 @@ const StoryUploadPage = () => {
     const [selectedFilter, setSelectedFilter] = useState('none');
     const navigate = useNavigate();
 
-    // TODO: localStorage에서 user 정보를 가져오세요 (JSON.parse 사용)
     const user = JSON.parse(localStorage.getItem('user') || '{}');
 
     const handleImageChange = (e) => {
@@ -86,12 +85,7 @@ const StoryUploadPage = () => {
                                     </button>
                                 </div>
 
-                                {/* TODO: 필터 스크롤 컨테이너 작성 */}
                                 <div className="filter-scroll-container">
-                                    {/* TODO: FILTER_OPTIONS.map으로 필터 목록 렌더링 */}
-                                    {/* key: option.name */}
-                                    {/* className: filter-item + (선택된 필터면 active 추가) */}
-                                    {/* onClick: setSelectedFilter(option.filter) */}
                                     {FILTER_OPTIONS.map((option) => (
                                         <div
                                             key={option.name}
@@ -128,10 +122,6 @@ const StoryUploadPage = () => {
                                 <Image className="upload-icon" />
                                 <span className="upload-text">
                                     스토리에 공유할 사진을 선택하세요
-                                </span>
-
-                                <span className="upload-select-btn">
-                                    컴퓨터에서 선택
                                 </span>
                                 <input
                                     type="file"

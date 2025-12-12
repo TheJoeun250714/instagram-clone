@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -68,10 +71,6 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
-    public User getUserByUsername(String userName) {
-        return null;
-    }
 
     @Override
     public User getUserById(int userId) {
@@ -90,8 +89,8 @@ public class UserServiceImpl implements UserService {
         // 2. 수정하는 파일이 있으면 파일 업로드 서비스 이용해서 프로필 이미지 서버에 저장
         if (file != null && !file.isEmpty()) {
             try {
-               String newAvatarPath = fileUploadService.uploadProfileImage(file);
-               existingUser.setUserAvatar(newAvatarPath);
+                String newAvatarPath = fileUploadService.uploadProfileImage(file);
+                existingUser.setUserAvatar(newAvatarPath);
 
             } catch (Exception e) {
                 log.error("프로필 이미지 수정 중 오류 발생", e);
@@ -99,13 +98,13 @@ public class UserServiceImpl implements UserService {
 
             }
         }
-        if(user.getUserName() != null)
+        if (user.getUserName() != null)
             existingUser.setUserName(user.getUserName());
-        if(user.getUserEmail() != null)
+        if (user.getUserEmail() != null)
             existingUser.setUserEmail(user.getUserEmail());
-        if(user.getUserPassword() != null)
+        if (user.getUserPassword() != null)
             existingUser.setUserPassword(passwordEncoder.encode(user.getUserPassword()));
-        if(user.getUserFullname() != null)
+        if (user.getUserFullname() != null)
             existingUser.setUserFullname(user.getUserFullname());
 
         // 5. db 업데이트
@@ -114,4 +113,29 @@ public class UserServiceImpl implements UserService {
         existingUser.setUserPassword(null);
         return existingUser;
     }
+
+    @Override
+    public List<User> searchUsers(String query) {
+        if (query == null || query.isEmpty()) {
+            return new ArrayList<>(); // 빈 배열 전달
+        }
+        try {
+            return userMapper.searchUsersByUserName(query);
+        } catch (Exception e) {
+            log.error("유저 검색 중 오류 발생 : {}", e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    @Override
+    public User getUserByUsername(String userName) {
+
+        try {
+            return userMapper.selectUserByUserNameExact(userName);
+        } catch (Exception e) {
+            log.error("유저네임으로 유저 조회 중 오류 발생 : {}", e.getMessage());
+            return null;
+        }
+    }
+
 }

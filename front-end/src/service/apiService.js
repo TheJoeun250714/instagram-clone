@@ -82,10 +82,10 @@ const apiService = {
         return res.data;
     },
 
-    // TODO: 로그아웃 함수
-    // localStorage에서 token과 user 제거하고 /login으로 이동
     logout: () => {
-        // TODO: 로그아웃 로직을 완성하세요
+      localStorage.removeItem("token");
+      localStorage.removeItem('user');
+      window.location.href = '/login';
     },
 
     // ===== 게시물 API =====

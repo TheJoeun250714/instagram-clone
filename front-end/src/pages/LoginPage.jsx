@@ -62,6 +62,7 @@ const LoginPage = () => {
 
                     <div>
                         <input
+                            className="login-input"
                             type="text"
                             placeholder="전화번호, 사용자 이름 또는 이메일"
                             value={userEmail}
@@ -70,6 +71,7 @@ const LoginPage = () => {
                         />
 
                         <input
+                            className="login-input"
                             type="password"
                             placeholder="비밀번호"
                             value={password}

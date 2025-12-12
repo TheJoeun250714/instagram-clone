@@ -116,9 +116,7 @@ const UploadPage = () => {
                                 <span className="upload-text">
                                     사진을 선택하세요.
                                 </span>
-                                <span className="upload-select-btn">
-                                    컴퓨터에서 선택
-                                </span>
+
                                 <input type="file"
                                        accept="image/*"
                                        onChange={handleImageChange}
@@ -139,7 +137,6 @@ const UploadPage = () => {
                                     {user.userName}
                                 </div>
 
-                                {/* TODO 11: 기존 textarea를 MentionInput으로 교체 */}
                                 <MentionInput
 
                                 value={caption}
@@ -148,15 +145,6 @@ const UploadPage = () => {
                                 rows={4}
                                 />
                                 {/*
-                                    요구사항:
-                                    1. 기존 textarea 주석 처리
-                                    2. <MentionInput /> 사용
-                                    3. props 전달:
-                                       - value={caption}
-                                       - onChange={setCaption}
-                                       - placeholder="문구를 입력하세요... (@로 사용자 태그)"
-                                       - rows={4}
-
                                 <textarea
                                     placeholder="문구를 입력하세요..."
                                     value={caption}
