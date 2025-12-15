@@ -3,10 +3,11 @@ import React from 'react';
 import { X, Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
 import { getImageUrl } from '../service/commonService';
 import MentionText from './MentionText';
+import PostOptionMenu from "./PostOptionMenu";
 
 const PostDetailModal = ({ post, currentUserId, onClose, onDelete, onToggleLike }) => {
 
-    if (!post) {return  null};
+    if (!post) return  null;
 
     const handleShare = async () => {
         const shareUrl =`${window.location.origin}/post/${post.postId}`;
@@ -58,7 +59,7 @@ const PostDetailModal = ({ post, currentUserId, onClose, onDelete, onToggleLike 
                                      src={getImageUrl(post.userAvatar)} />
                                 <span className="post-user-name">{post.userName}</span>
                             </div>
-                            <PostDetailModal
+                            <PostOptionMenu
                                 post={post}
                                 currentUserId={currentUserId}
                                 onDelete={onDelete} />

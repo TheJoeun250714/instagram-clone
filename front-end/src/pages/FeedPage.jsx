@@ -7,10 +7,7 @@ import {getImageUrl} from "../service/commonService";
 import MentionText from "../components/MentionText";
 import PostOptionMenu from "../components/PostOptionMenu";
 import PostDetailModal from "../components/PostDetailModal";
-// TODO 12: MentionText 컴포넌트 import
-// import MentionText from "../components/MentionText";
-
-
+/* 이미지 클릭시 모달 열기 */
 const FeedPage = () => {
     const [posts, setPosts] = useState([]);
     const [stories, setStories] = useState([]);
@@ -134,7 +131,10 @@ const FeedPage = () => {
                         <article key={post.postId} className="post-card">
                             <div className="post-header">
                                 <div className="post-user-info">
-                                    <img src={getImageUrl(post.userAvatar)} className="post-user-avatar"/>
+                                    <img src={getImageUrl(post.userAvatar)}
+                                         className="post-user-avatar"
+
+                                    />
                                     <span className="post-username">{post.userName}</span>
                                 </div>
                                 <PostOptionMenu
@@ -143,7 +143,11 @@ const FeedPage = () => {
                                     onDelete={deletePost}/>
                             </div>
 
-                            <img src={post.postImage} className="post-image"/>
+                            <img src={post.postImage}
+                                 className="post-image"
+                                 onClick={() => setSelectedPost(post)}
+                                 style={{cursor: 'pointer'}}
+                            />
                             <div className="post-content">
                                 <div className="post-actions">
                                     <div className="post-actions-left">

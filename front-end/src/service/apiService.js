@@ -95,11 +95,16 @@ const apiService = {
         return res.data;
     },
 
+    // user or my 추가
     getPost: async (userId) => {
         const res = await api.get('/posts/' + userId);
         return res.data;
     },
-
+    // 단순 getPost 사용
+    getUserPost: async (postId) => {
+        const res = await api.get('/posts/' + postId);
+        return res.data;
+    },
     createPost: async (postImage, postCaption, postLocation) => {
         const formData = new FormData();
         formData.append('postImage', postImage);

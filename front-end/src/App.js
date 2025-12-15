@@ -11,12 +11,13 @@ import MyFeedPage from "./pages/MyFeedPage";
 import StoryDetail from "./pages/StoryDetail";
 import EditProfilePage from "./pages/EditProfilePage";
 import KakaoCallback from "./pages/KakaoCallback";
+import PostDetailModal from "./components/PostDetailModal";
 
 
 function App() {
 
     const [user, setUser] = useState(() => {
-      try  {
+        try {
             const savedUser = localStorage.getItem("user");
             const token = localStorage.getItem("token");
 
@@ -25,10 +26,10 @@ function App() {
             }
             return null;
         } catch (err) {
-       localStorage.removeItem("user");
-       localStorage.removeItem("token");
-       return null;
-      }
+            localStorage.removeItem("user");
+            localStorage.removeItem("token");
+            return null;
+        }
     })
     return (
         <div>
@@ -43,6 +44,11 @@ function App() {
                                <PrivateRoute>
                                    <FeedPage/>
                                </PrivateRoute>}
+                    />
+                    <Route path="/post:postId"
+                           element={
+                               <PostDetailModal/>
+                           }
                     />
                     <Route
                         path="/story/detail/:userId"
@@ -76,7 +82,7 @@ function App() {
                         path="/profile/edit"
                         element={
                             <PrivateRoute>
-                               <EditProfilePage />
+                                <EditProfilePage/>
                             </PrivateRoute>
                         }
                     />
