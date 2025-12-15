@@ -142,12 +142,19 @@ const FeedPage = () => {
                                     currentUserId={currentUser.userId}
                                     onDelete={deletePost}/>
                             </div>
-
+                            <img src={post.postImage}
+                                 className="post-image"
+                                 onClick={() => navigate(`/post/${post.postId}`)}
+                                 style={{cursor: 'pointer'}}
+                            />
+                            {/*
+                            modal 로 detail 띄우기
                             <img src={post.postImage}
                                  className="post-image"
                                  onClick={() => setSelectedPost(post)}
                                  style={{cursor: 'pointer'}}
                             />
+                            */}
                             <div className="post-content">
                                 <div className="post-actions">
                                     <div className="post-actions-left">

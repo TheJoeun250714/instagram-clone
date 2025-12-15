@@ -19,7 +19,7 @@
         FROM post_detail_view
         WHERE post_id = #{postId}
     </select>
-    <!-- 특정 사용자의 게시물 조회 -->
+    <!-- 본인 게시물 조회 -->
     <select id="selectPostsByUserId"  resultType="Post">
         SELECT
             *
@@ -27,6 +27,7 @@
         WHERE user_id = #{userId}
         ORDER BY created_at DESC
     </select>
+
 
     <!-- 게시물 작성 -->
     <insert id="insertPost" parameterType="Post" useGeneratedKeys="true" keyProperty="postId" keyColumn="post_id">

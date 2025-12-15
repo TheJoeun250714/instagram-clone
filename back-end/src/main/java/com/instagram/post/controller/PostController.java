@@ -57,7 +57,7 @@ public class PostController {
         }
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/user/{userId}")
     public ResponseEntity<List<Post>> getAllPostsByUserId( @RequestHeader("Authorization") String authHeader,
                                                            @PathVariable int userId) {
         try {
@@ -66,6 +66,21 @@ public class PostController {
 
             List<Post> posts = postService.getPostsByUserId(userId);
             return ResponseEntity.ok(posts);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    @GetMapping("/{postId}")
+    public ResponseEntity<Post> getAllPostsById( @RequestHeader("Authorization") String authHeader,
+                                                           @PathVariable int postId) {
+        try {
+            String token = authHeader.substring(7);
+            int currentUserId = jwtUtil.getUserIdFromToken(token);
+
+            Post post = postService.getPostById(postId, currentUserId);
+            return ResponseEntity.ok(post);
+
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

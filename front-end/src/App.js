@@ -12,6 +12,7 @@ import StoryDetail from "./pages/StoryDetail";
 import EditProfilePage from "./pages/EditProfilePage";
 import KakaoCallback from "./pages/KakaoCallback";
 import PostDetailModal from "./components/PostDetailModal";
+import PostDetailPage from "./pages/PostDetailPage";
 
 
 function App() {
@@ -45,9 +46,9 @@ function App() {
                                    <FeedPage/>
                                </PrivateRoute>}
                     />
-                    <Route path="/post:postId"
+                    <Route path="/post/:postId"
                            element={
-                               <PostDetailModal/>
+                               <PostDetailPage/>
                            }
                     />
                     <Route
