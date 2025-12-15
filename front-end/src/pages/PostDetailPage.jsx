@@ -194,6 +194,19 @@ const PostDetailPage = () => {
                             {post.createdAt || '방금 전'}
                         </div>
                     </div>
+
+                    <div className="comment-input-container">
+                        <input
+                            className="comment-input"
+                            placeholder="댓글 달기 ..."
+                            />
+                        <button
+                            className="comment-post-btn"
+                        style={{opacity: commentText.trim()? 1 : 0.3}}
+                        >
+                            게시
+                        </button>
+                    </div>
                 </article>
 
 
