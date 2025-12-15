@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ArrowLeft, Film, Home, MessageCircle, PlusSquare, Settings, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import SearchModal from "./SearchModal";
 
 const Header = ({
                     type="feed",
@@ -14,19 +15,28 @@ const Header = ({
     const navigate = useNavigate();
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const openSidebar = () => setIsSidebarOpen(true);
-
     const closeSidebar = () => setIsSidebarOpen(false);
+
+    const openSearch = () => setIsSearchOpen(true);
+    const closeSearch = () => setIsSearchOpen(false);
+
+    // 여기에 코드 작성
 
     if(type === 'feed') {
         return (
             <>
                 <header className="header">
                     <div className="header-container">
-                        <h1 className="header-title">Instagram</h1>
+                        <img className="header-title"
+                             onClick={()=> navigate("/")}
+                        src="/static/img/logo.png"
+                        />
                         <div className="header-nav">
-                            <Home className="header-icon" onClick={() => navigate('/')}/>
+                            <Home className="header-icon" onClick={openSearch}/>
+
                             <MessageCircle className="header-icon"/>
                             <PlusSquare className="header-icon" onClick={() => navigate('/upload')}/>
                             <Film className="header-icon" onClick={() => navigate("/story/upload")}/>
@@ -42,9 +52,12 @@ const Header = ({
                 </header>
 
                 <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+
+                <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
             </>
         )
     }
+
     if(type ==='upload') {
         return (
             <header className="upload-header">
@@ -65,4 +78,5 @@ const Header = ({
         )
     }
 }
+
 export default Header;

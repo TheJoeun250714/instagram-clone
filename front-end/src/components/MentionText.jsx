@@ -56,19 +56,6 @@ const MentionText = ({text, className = ''}) => {
                 if (part.type === 'mention') {
                     return (
                         <>
-                        <span
-                            key={index}
-                            className="mention-link"
-                            onClick={
-                                (e) => handleMentionClick(part.username, e)
-                            }
-                            style={{
-                                color: '#0095f6',
-                                cursor: 'pointer',
-                                fontWeight: 600
-                            }}>
-                            {part.type}
-                        </span>
                             <span
                                 key={index}
                                 className="mention-link"
@@ -82,19 +69,7 @@ const MentionText = ({text, className = ''}) => {
                                 }}>
                             {part.content}
                         </span>
-                            <span
-                                key={index}
-                                className="mention-link"
-                                onClick={
-                                    (e) => handleMentionClick(part.username, e)
-                                }
-                                style={{
-                                    color: '#0095f6',
-                                    cursor: 'pointer',
-                                    fontWeight: 600
-                                }}>
-                            {part.username}
-                        </span>
+
                         </>
                     );
                 }
