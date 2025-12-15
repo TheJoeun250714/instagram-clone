@@ -1,0 +1,94 @@
+2025-12-13 12:33:31.068  INFO 22804 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.8 with PID 22804 (E:\project\instagram-clone\back-end\build\classes\java\main started by TJ in E:\project\instagram-clone\back-end)
+2025-12-13 12:33:31.074  INFO 22804 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-13 12:33:31.238  INFO 22804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-13 12:33:31.238  INFO 22804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-13 12:33:35.729  INFO 22804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-13 12:33:35.802  INFO 22804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 JPA repository interfaces.
+2025-12-13 12:33:38.851  INFO 22804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-13 12:33:38.878  INFO 22804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-13 12:33:38.879  INFO 22804 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-13 12:33:38.976  INFO 22804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-13 12:33:38.977  INFO 22804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7735 ms
+2025-12-13 12:33:39.474  INFO 22804 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-13 12:33:39.564  INFO 22804 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-12-13 12:33:39.614  INFO 22804 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-13 12:33:40.039  INFO 22804 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-13 12:33:40.082  INFO 22804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-13 12:33:40.455  INFO 22804 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@7bcb309
+2025-12-13 12:33:40.456  INFO 22804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-13 12:33:40.585  INFO 22804 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-13 12:33:41.172  INFO 22804 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-13 12:33:41.179  INFO 22804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 12:33:42.064  WARN 22804 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-13 12:33:42.235  WARN 22804 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1d1f1eed-2a0e-4a79-94d8-2a551ac4080f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-13 12:33:42.251  INFO 22804 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-13 12:33:43.598  WARN 22804 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-13 12:33:45.027  INFO 22804 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-13 12:33:45.237  INFO 22804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-13 12:33:45.334  INFO 22804 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-13 12:33:45.335  INFO 22804 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@141a6d51]]
+2025-12-13 12:33:45.336  INFO 22804 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-13 12:33:45.362  INFO 22804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-13 12:33:45.381  INFO 22804 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 15.96 seconds (process running for 18.435)
+2025-12-13 12:33:46.898  INFO 22804 --- [RMI TCP Connection(1)-192.168.0.237] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-13 12:33:46.899  INFO 22804 --- [RMI TCP Connection(1)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-13 12:33:46.901  INFO 22804 --- [RMI TCP Connection(1)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-13 12:34:45.291  INFO 22804 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-13 12:36:39.045  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-13 12:36:39.045  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-13 12:36:39.046  INFO 22804 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 8Pzd-cQJWwvXdKSC0Kt1XTatDcogCHIFwhOWJ19O5ZwYJ2Gp4MtUewAAAAQKDRuaAAABmxXIKqfE017PSiBv1Q
+2025-12-13 12:36:39.046  INFO 22804 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 요청 - code: 8Pzd-cQJWwvXdKSC0Kt1XTatDcogCHIFwhOWJ19O5ZwYJ2Gp4MtUewAAAAQKDRuaAAABmxXIKqfE017PSiBv1Q
+2025-12-13 12:36:39.047  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-13 12:36:39.047  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-13 12:36:39.047  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [8Pzd-cQJWwvXdKSC0Kt1XTatDcogCHIFwhOWJ19O5ZwYJ2Gp4MtUewAAAAQKDRuaAAABmxXIKqfE017PSiBv1Q]
+2025-12-13 12:36:39.049  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [8Pzd-cQJWwvXdKSC0Kt1XTatDcogCHIFwhOWJ19O5ZwYJ2Gp4MtUewAAAAQKDRuaAAABmxXIKqfE017PSiBv1Q]
+2025-12-13 12:36:39.488  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 439ms
+2025-12-13 12:36:39.488  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 440ms
+2025-12-13 12:36:39.488  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.488  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 액세스 토큰 발급 성공
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getKakaoUserInfo() 서비스 호출 ==========
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [ScqLuxc8wpqgXNwqtX3ddm8asnsxCCQ4AAAAAQoNGVMAAAGbFcguHc2yTeNnt1bO]
+2025-12-13 12:36:39.489  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [5s7y5zapvzZc2a9znU8NZ07khw-JDaFFAAAAAQoNFZsAAAGbFcguHs2yTeNnt1bO]
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 89ms
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 89ms
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 사용자 정보 조회 성공 - email: kimkyungnan@kakao.com
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-13 12:36:39.578  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByEmail() 서비스 호출 ==========
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [kimkyungnan@kakao.com]
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-13 12:36:39.579  INFO 22804 --- [http-nio-9000-exec-1] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-13 12:36:39.580  INFO 22804 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 카카오 로그인 - 미가입 회원: kimkyungnan@kakao.com
+2025-12-13 13:04:45.176  INFO 22804 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-12-13 13:34:45.081  INFO 22804 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2025-12-13 14:04:45.033  INFO 22804 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2025-12-13 14:34:45.011  INFO 22804 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 4]
+2025-12-13 14:46:18.510  INFO 22804 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-13 14:46:18.546  INFO 22804 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-13 14:46:18.559  INFO 22804 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-13 14:46:18.559  INFO 22804 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@141a6d51]]
+2025-12-13 14:46:18.559  INFO 22804 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-13 14:46:18.582  INFO 22804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-13 14:46:18.653  INFO 22804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-13 14:46:19.004  INFO 22804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.

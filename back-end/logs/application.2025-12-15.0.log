@@ -1,0 +1,709 @@
+2025-12-15 09:34:58.989  INFO 24828 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.8 with PID 24828 (E:\project\instagram-clone\back-end\build\classes\java\main started by TJ in E:\project\instagram-clone\back-end)
+2025-12-15 09:34:58.996  INFO 24828 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-15 09:34:59.450  INFO 24828 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-15 09:34:59.450  INFO 24828 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-15 09:35:05.476  INFO 24828 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 09:35:05.580  INFO 24828 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 0 JPA repository interfaces.
+2025-12-15 09:35:07.856  INFO 24828 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-15 09:35:07.883  INFO 24828 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-15 09:35:07.884  INFO 24828 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-15 09:35:07.987  INFO 24828 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-15 09:35:07.988  INFO 24828 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8536 ms
+2025-12-15 09:35:08.596  INFO 24828 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 09:35:08.701  INFO 24828 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-12-15 09:35:08.777  INFO 24828 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15 09:35:09.495  INFO 24828 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 09:35:09.569  INFO 24828 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-15 09:35:09.928  INFO 24828 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@22c85212
+2025-12-15 09:35:09.929  INFO 24828 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-15 09:35:10.081  INFO 24828 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 09:35:10.844  INFO 24828 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 09:35:10.853  INFO 24828 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 09:35:12.013  WARN 24828 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 09:35:12.200  WARN 24828 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 354cc3ed-a23b-4541-b296-8f9019c529bb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-15 09:35:12.216  INFO 24828 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-15 09:35:15.149  WARN 24828 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-15 09:35:17.387  INFO 24828 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-15 09:35:17.796  INFO 24828 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-15 09:35:17.954  INFO 24828 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-15 09:35:17.955  INFO 24828 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1d04920]]
+2025-12-15 09:35:17.957  INFO 24828 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-15 09:35:18.034  INFO 24828 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-15 09:35:18.059  INFO 24828 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 21.39 seconds (process running for 22.969)
+2025-12-15 09:35:19.865  INFO 24828 --- [RMI TCP Connection(3)-192.168.0.237] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15 09:35:19.865  INFO 24828 --- [RMI TCP Connection(3)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-15 09:35:19.870  INFO 24828 --- [RMI TCP Connection(3)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-12-15 09:36:17.858  INFO 24828 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-15 09:40:21.280  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.login()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:21.281  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.login() 서비스 호출 ==========
+2025-12-15 09:40:21.282  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [gildong@email.com, abc1234]
+2025-12-15 09:40:21.444  INFO 24828 --- [http-nio-9000-exec-2] c.i.user.model.service.UserServiceImpl   : 로그인성공 - 이메일: gildong@email.com
+2025-12-15 09:40:21.445  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 162ms
+2025-12-15 09:40:21.445  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:40:21.554  INFO 24828 --- [http-nio-9000-exec-2] c.i.user.controller.UserController       : 로그인 성공 - 이메일 : gildong@email.com
+2025-12-15 09:40:22.190  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:22.258  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:40:22.258  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 09:40:22.287  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 28ms
+2025-12-15 09:40:22.287  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:40:22.296  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:22.300  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:40:22.300  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 09:40:22.304  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-15 09:40:22.304  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:40:22.330  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:22.330  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:40:22.330  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:40:22.330  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:40:22.339  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:40:22.339  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-15 09:40:22.339  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:40:22.379  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:22.381  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:40:22.381  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:40:22.381  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:40:22.387  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:40:22.387  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 6ms
+2025-12-15 09:40:22.387  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:40:54.167  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [UserController.signUp()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:40:54.167  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.signUp() 서비스 호출 ==========
+2025-12-15 09:40:54.170  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [User(userId=0, userName=dongdong, userEmail=dongdong@email.com, userPassword=abc1234, userFullname=동동스, userAvatar=null, createdAt=null, updatedAt=null)]
+2025-12-15 09:40:54.278  INFO 24828 --- [http-nio-9000-exec-4] c.i.user.model.service.UserServiceImpl   : 회원가입 완료 - 이메일: dongdong@email.com, 사용자명: dongdong
+2025-12-15 09:40:54.278  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 108ms
+2025-12-15 09:40:54.278  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:03.762  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserController.login()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:03.762  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.login() 서비스 호출 ==========
+2025-12-15 09:41:03.762  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [dongdong@email.com, abc1234]
+2025-12-15 09:41:03.858  INFO 24828 --- [http-nio-9000-exec-7] c.i.user.model.service.UserServiceImpl   : 로그인성공 - 이메일: dongdong@email.com
+2025-12-15 09:41:03.858  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 96ms
+2025-12-15 09:41:03.858  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:03.859  INFO 24828 --- [http-nio-9000-exec-7] c.i.user.controller.UserController       : 로그인 성공 - 이메일 : dongdong@email.com
+2025-12-15 09:41:04.912  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:04.914  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:41:04.914  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:41:04.923  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-15 09:41:04.923  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:04.945  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:41:04.946  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:41:04.948  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:41:04.948  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:04.956  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:41:04.956  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 10ms
+2025-12-15 09:41:04.956  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:04.991  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:04.992  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:41:04.992  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:41:04.993  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:41:04.994  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:41:04.994  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:41:04.994  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:07.148  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.addLike()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:07.148  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.addLike() 서비스 호출 ==========
+2025-12-15 09:41:07.148  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [4, 3]
+2025-12-15 09:41:07.158  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-15 09:41:07.158  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:10.582  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:10.582  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:41:10.582  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 09:41:10.588  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 6ms
+2025-12-15 09:41:10.588  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:10.597  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:10.597  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:10.597  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:41:10.597  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:41:10.598  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:41:10.598  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:41:10.598  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 09:41:10.599  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:41:10.599  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:41:10.599  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:10.609  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 11ms
+2025-12-15 09:41:10.610  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:41:10.665  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:41:10.671  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:41:10.672  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:41:10.672  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:41:10.674  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:41:10.674  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:41:10.674  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:43:34.129  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:43:34.130  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:43:34.131  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:43:34.137  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 6ms
+2025-12-15 09:43:34.137  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:43:34.150  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:43:34.154  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:43:34.154  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:43:34.150  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:43:34.154  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:43:34.155  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:43:34.155  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:43:34.156  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:43:34.156  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:43:34.157  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:43:34.157  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:43:34.157  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:43:34.189  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:43:34.189  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:43:34.189  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:43:34.189  INFO 24828 --- [http-nio-9000-exec-5] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:43:34.190  INFO 24828 --- [http-nio-9000-exec-5] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:43:34.190  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:43:34.190  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:03.865  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:03.868  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:03.868  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:03.873  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-15 09:45:03.873  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:03.879  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:03.880  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:03.880  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:03.882  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:03.883  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:09.078  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:09.079  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:09.080  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:09.084  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-15 09:45:09.084  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:09.099  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:09.099  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:09.100  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:09.104  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-15 09:45:09.104  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:10.857  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:10.859  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:45:10.859  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:10.861  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:45:10.861  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:10.868  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:10.869  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:45:10.869  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:10.870  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:10.871  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:45:10.872  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:45:10.872  INFO 24828 --- [http-nio-9000-exec-9] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:45:10.875  INFO 24828 --- [http-nio-9000-exec-9] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:45:10.875  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 09:45:10.875  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:10.878  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 9ms
+2025-12-15 09:45:10.878  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:10.950  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:10.952  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:45:10.953  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:45:10.953  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:45:10.954  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:45:10.955  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:10.957  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:11.811  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:11.811  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:11.811  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:11.814  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:11.814  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:11.820  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:11.820  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:11.820  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:11.822  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:45:11.822  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:27.316  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserController.editUserProfile()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:27.322  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.updateUser() 서비스 호출 ==========
+2025-12-15 09:45:27.322  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [User(userId=3, userName=dongdong, userEmail=dongdong@email.com, userPassword=null, userFullname=동동스, userAvatar=null, createdAt=null, updatedAt=null), org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@44f05018]
+2025-12-15 09:45:27.340  INFO 24828 --- [http-nio-9000-exec-6] c.i.common.util.FileUploadService        : 프로필 이미지 업로드 성공: man.png -> 216d9478-3d03-4426-84b0-c20629ef8f65.png
+2025-12-15 09:45:27.344  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 22ms
+2025-12-15 09:45:27.344  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:28.446  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:28.447  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:28.448  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:28.450  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:28.450  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:28.459  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:28.460  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:28.460  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:28.462  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:28.462  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:38.445  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:38.446  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:38.446  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:38.448  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:38.448  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:38.456  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:38.457  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:38.457  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:38.459  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:38.459  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:41.595  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:41.597  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:41.598  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:41.600  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:45:41.600  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:45:41.609  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:45:41.610  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 09:45:41.610  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:45:41.611  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:45:41.612  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:29.769  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:29.770  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:29.770  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [ㅇ]
+2025-12-15 09:48:29.776  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 6ms
+2025-12-15 09:48:29.776  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:31.541  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:31.541  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:31.541  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [ㅇ]
+2025-12-15 09:48:31.543  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:48:31.543  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:33.196  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:33.196  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:33.196  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [g]
+2025-12-15 09:48:33.198  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:48:33.198  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:35.529  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:35.529  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:35.529  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [g]
+2025-12-15 09:48:35.530  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:48:35.530  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:37.430  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:37.430  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:37.430  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [g]
+2025-12-15 09:48:37.432  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:48:37.432  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:37.547  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:37.547  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 09:48:37.548  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [gi]
+2025-12-15 09:48:37.549  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:48:37.549  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:46.973  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.createPost()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:46.974  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.createPost() 서비스 호출 ==========
+2025-12-15 09:48:46.974  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@40ef3ef0, 사랑하는 나의 재로미와함께.. @gildong , 로미나라, 3]
+2025-12-15 09:48:46.981  INFO 24828 --- [http-nio-9000-exec-9] c.i.common.util.FileUploadService        : 게시물 이미지 업로드 성공: dog.png -> 2f9a50a4-ed0c-4229-9fdd-3dd348ac50cb.png
+2025-12-15 09:48:46.984  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 10ms
+2025-12-15 09:48:46.984  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:48.260  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:48.261  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:48:48.261  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:48:48.263  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:48:48.263  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:48.268  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:48.270  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:48.270  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:48:48.269  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:48:48.270  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:48:48.271  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:48:48.271  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:48:48.273  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:48:48.273  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:48.273  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:48:48.273  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:48:48.273  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:48:48.366  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:48:48.366  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:48:48.366  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:48:48.366  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:48:48.369  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:48:48.369  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 09:48:48.369  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:50:13.509  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:50:13.509  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:50:13.510  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:50:13.513  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 09:50:13.513  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:50:13.591  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:50:13.591  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:50:13.591  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:50:13.591  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:50:13.592  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:50:13.592  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 09:50:13.592  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:50:13.594  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:50:13.599  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 09:50:13.599  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 09:50:13.601  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:50:13.601  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:50:13.722  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:50:13.722  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 09:50:13.722  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 09:50:13.722  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 09:50:13.724  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 09:50:13.724  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:50:13.724  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 09:50:16.555  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserSearchController.getUserByUsername()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 09:50:16.556  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.getUserByUsername() 서비스 호출 ==========
+2025-12-15 09:50:16.556  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [gildong]
+2025-12-15 09:50:16.558  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 09:50:16.558  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:06:17.739  INFO 24828 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-12-15 10:12:29.002  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:29.003  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:12:29.003  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:12:29.028  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 25ms
+2025-12-15 10:12:29.028  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:12:29.033  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:29.034  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:12:29.034  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:12:29.036  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:12:29.036  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:12:29.050  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:29.050  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:12:29.050  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:12:29.050  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:12:29.055  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:12:29.055  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 5ms
+2025-12-15 10:12:29.056  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:12:29.130  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:29.130  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:12:29.131  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:12:29.131  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:12:29.132  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:12:29.132  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:12:29.132  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:12:42.051  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:42.052  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:12:42.052  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [ㅎ]
+2025-12-15 10:12:42.057  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 5ms
+2025-12-15 10:12:42.057  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:12:43.404  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:12:43.404  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:12:43.404  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [gile]
+2025-12-15 10:12:43.407  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:12:43.407  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:13:56.397  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:13:56.397  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:13:56.397  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [ddd]
+2025-12-15 10:13:56.398  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:13:56.398  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:13:58.472  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:13:58.472  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:13:58.472  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [ddddd]
+2025-12-15 10:13:58.474  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:13:58.474  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:01.377  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:01.377  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:14:01.377  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [ddddddddddddddddd]
+2025-12-15 10:14:01.383  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:14:01.383  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:38.505  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:38.505  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:14:38.505  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [gile]
+2025-12-15 10:14:38.507  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:14:38.507  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:39.043  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:39.044  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:14:39.044  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [gil]
+2025-12-15 10:14:39.045  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:14:39.046  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:39.715  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:39.715  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:14:39.715  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [gil]
+2025-12-15 10:14:39.716  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:14:39.716  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:48.071  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:48.071  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:14:48.071  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:14:48.073  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:14:48.074  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:48.080  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:48.081  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:14:48.081  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:14:48.084  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:14:48.084  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:48.089  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:48.089  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:14:48.089  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:14:48.089  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:14:48.090  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:14:48.090  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:14:48.090  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:14:48.233  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:14:48.233  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:14:48.233  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:14:48.233  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:14:48.234  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:14:48.234  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:14:48.234  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:05.584  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:05.585  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:15:05.585  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [gi]
+2025-12-15 10:15:05.586  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:15:05.587  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:05.950  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [UserSearchController.searchUsers()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:05.950  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.searchUsers() 서비스 호출 ==========
+2025-12-15 10:15:05.950  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [gil]
+2025-12-15 10:15:05.952  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:15:05.952  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:50.518  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:50.519  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:15:50.519  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:15:50.522  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:15:50.522  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:50.526  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:50.527  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:15:50.527  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:15:50.528  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:15:50.528  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:50.528  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:50.528  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:15:50.529  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:15:50.529  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:15:50.530  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:15:50.530  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:15:50.530  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:50.667  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:50.667  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:15:50.668  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:15:50.668  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:15:50.669  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:15:50.669  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:15:50.669  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:53.315  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:53.316  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:15:53.316  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:15:53.318  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:15:53.318  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:15:53.352  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:15:53.353  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:15:53.353  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:15:53.355  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:15:53.355  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:02.903  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:02.904  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:18:02.904  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:18:02.906  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:18:02.906  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:02.910  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:02.911  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:18:02.911  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:18:02.913  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:18:02.913  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:02.913  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:02.914  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:18:02.914  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:18:02.914  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:18:02.915  INFO 24828 --- [http-nio-9000-exec-10] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:18:02.915  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:18:02.915  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:02.978  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:02.978  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:18:02.978  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:18:02.978  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:18:02.979  INFO 24828 --- [http-nio-9000-exec-2] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:18:02.979  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:18:02.979  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:04.031  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:04.032  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:18:04.032  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:18:04.035  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:18:04.035  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:18:04.039  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:18:04.040  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:18:04.040  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:18:04.042  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:18:04.042  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:21:26.252  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:21:26.255  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:21:26.255  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:21:26.258  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:21:26.258  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:21:26.264  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:21:26.266  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:21:26.266  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:21:26.268  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:21:26.268  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:21.407  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:21.408  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:31:21.408  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:21.410  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:21.411  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:21.415  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:21.415  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:31:21.415  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:21.416  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:31:21.416  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:21.421  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:21.421  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:31:21.421  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:31:21.421  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:31:21.422  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:31:21.422  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:31:21.422  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:21.458  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:21.459  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:31:21.459  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:31:21.459  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:31:21.460  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:31:21.460  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:31:21.460  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:25.161  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:25.162  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:31:25.162  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:25.164  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:25.164  INFO 24828 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:25.170  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:25.171  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:31:25.171  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:25.173  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:25.173  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:26.989  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:26.989  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:31:26.989  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:26.991  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:26.991  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:26.994  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:26.995  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:31:26.995  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:26.996  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:31:26.996  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:26.996  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:26.996  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:31:26.997  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:31:26.997  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:31:26.998  INFO 24828 --- [http-nio-9000-exec-1] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:31:26.998  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:31:26.998  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:27.063  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:27.063  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:31:27.063  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:31:27.064  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:31:27.064  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:31:27.064  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-15 10:31:27.064  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:29.871  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:29.872  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:31:29.872  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:29.874  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:29.874  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:31:29.882  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:31:29.882  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:31:29.883  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:31:29.885  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:31:29.885  INFO 24828 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:36:17.597  INFO 24828 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2025-12-15 10:37:26.846  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:37:26.849  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:37:26.849  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:37:26.869  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 20ms
+2025-12-15 10:37:26.869  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:37:26.872  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsByUserId()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:37:26.873  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostsByUserId() 서비스 호출 ==========
+2025-12-15 10:37:26.873  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [3]
+2025-12-15 10:37:26.875  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:37:26.875  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:43:04.273  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [UserController.login()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:43:04.273  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== UserServiceImpl.login() 서비스 호출 ==========
+2025-12-15 10:43:04.273  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [gildong@email.com, abc1234]
+2025-12-15 10:43:04.377  INFO 24828 --- [http-nio-9000-exec-4] c.i.user.model.service.UserServiceImpl   : 로그인성공 - 이메일: gildong@email.com
+2025-12-15 10:43:04.377  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 104ms
+2025-12-15 10:43:04.377  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:43:04.378  INFO 24828 --- [http-nio-9000-exec-4] c.i.user.controller.UserController       : 로그인 성공 - 이메일 : gildong@email.com
+2025-12-15 10:43:04.886  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:43:04.886  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:43:04.886  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:43:04.889  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:43:04.889  INFO 24828 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:43:04.895  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:43:04.897  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:43:04.897  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:43:04.898  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:43:04.898  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:43:04.899  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:43:04.900  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:43:04.900  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:43:04.900  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:43:04.905  INFO 24828 --- [http-nio-9000-exec-3] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:43:04.905  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 5ms
+2025-12-15 10:43:04.905  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:43:04.939  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:43:04.939  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:43:04.939  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:43:04.939  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:43:04.940  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:43:04.940  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:43:04.940  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.113  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.116  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:56:55.116  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:56:55.119  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:56:55.119  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.134  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.135  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:56:55.136  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:56:55.139  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:56:55.139  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.161  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.161  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:56:55.161  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:56:55.161  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:56:55.163  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:56:55.163  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:56:55.163  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.169  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.169  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:56:55.169  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:56:55.170  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:56:55.171  INFO 24828 --- [http-nio-9000-exec-6] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:56:55.171  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:56:55.171  INFO 24828 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.249  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.250  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:56:55.250  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:56:55.252  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 10:56:55.252  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:55.265  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:55.265  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:56:55.265  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:56:55.265  INFO 24828 --- [http-nio-9000-exec-9] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:56:55.266  INFO 24828 --- [http-nio-9000-exec-9] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:56:55.266  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:56:55.266  INFO 24828 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:56.531  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:56.532  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:56:56.532  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:56:56.533  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:56:56.534  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:56:56.544  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : Running Time : 0ms
+2025-12-15 10:56:56.545  INFO 24828 --- [http-nio-9000-exec-4] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:57:43.016  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:57:43.016  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:57:43.016  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:57:43.019  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:57:43.020  INFO 24828 --- [http-nio-9000-exec-3] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:57:43.023  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPosts()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:57:43.024  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getAllPosts() 서비스 호출 ==========
+2025-12-15 10:57:43.024  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [1]
+2025-12-15 10:57:43.027  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 3ms
+2025-12-15 10:57:43.027  INFO 24828 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:57:43.027  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:57:43.027  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:57:43.028  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:57:43.028  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:57:43.029  INFO 24828 --- [http-nio-9000-exec-7] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:57:43.029  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:57:43.029  INFO 24828 --- [http-nio-9000-exec-7] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 10:57:43.189  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [StoryController.getAllStories()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 10:57:43.189  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== StoryServiceImpl.getAllStories() 서비스 호출 ==========
+2025-12-15 10:57:43.189  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : []
+2025-12-15 10:57:43.189  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 모든 활성 스토리 조회
+2025-12-15 10:57:43.190  INFO 24828 --- [http-nio-9000-exec-8] c.i.s.model.service.StoryServiceImpl     : 조회된 스토리 개수 : 0
+2025-12-15 10:57:43.190  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 1ms
+2025-12-15 10:57:43.190  INFO 24828 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 11:06:17.520  INFO 24828 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2025-12-15 11:36:17.673  INFO 24828 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 4]

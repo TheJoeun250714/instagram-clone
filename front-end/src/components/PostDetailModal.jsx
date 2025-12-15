@@ -3,59 +3,37 @@ import React from 'react';
 import { X, Heart, MessageCircle, Send, Bookmark } from 'lucide-react';
 import { getImageUrl } from '../service/commonService';
 import MentionText from './MentionText';
-import PostOptionsMenu from './PostOptionsMenu';
 
 const PostDetailModal = ({ post, currentUserId, onClose, onDelete, onToggleLike }) => {
 
-    // ============================================
-    // TODO 1-1: post가 없으면 null 반환하기
-    // ============================================
     if (!post) {return  null};
 
-
-    // ============================================
-    // TODO 2: 링크 공유 함수 구현
-    // ============================================
     const handleShare = async () => {
-        // TODO 2-1: 공유할 URL 만들기
         const shareUrl =`${window.location.origin}/post/${post.postId}`;
 
-        // TODO 2-2: Web Share API 지원 여부 확인
         if (navigator.share) {
             try {
-                // TODO 2-3: 공유하기
                 await navigator.share({
                     title: `${post.userName}의 게시물`,
                     text: post.postCaption,
                     url:  shareUrl
                 });
             } catch (err) {
-                // TODO 2-4: 에러 처리 (AbortError 제외)
                 if (err.name !== 'AbortError') {
                    copyToClipboard(shareUrl);
                 }
             }
         } else {
-            // TODO 2-5: Web Share API 미지원 시 클립보드 복사
+            copyToClipboard(shareUrl);
 
         }
     };
-
-    // ============================================
-    // TODO 2-6: 클립보드 복사 함수 구현
-    // ============================================
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
             alert('링크가 클립보트에 복사되었습니다.');
         }).catch(() => {
             alert("링크 복사에 실패했습니다.");
         })
-        // navigator.clipboard.writeText() 사용
-        // 성공: "링크가 클립보드에 복사되었습니다!" 알림
-        // 실패: "링크 복사에 실패했습니다." 알림
-
-
-
     };
 
     return (

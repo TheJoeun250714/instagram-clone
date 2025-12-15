@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import {getImageUrl} from "../service/commonService";
 import MentionText from "../components/MentionText";
 import PostOptionMenu from "../components/PostOptionMenu";
+import PostDetailModal from "../components/PostDetailModal";
 // TODO 12: MentionText 컴포넌트 import
 // import MentionText from "../components/MentionText";
 
@@ -17,7 +18,7 @@ const FeedPage = () => {
     const [selectedPost, setSelectedPost] = useState(null);
 
     const navigate = useNavigate();
-    const currentUser = JSON.parse(localStorage.getItem("user") ||'[]');
+    const currentUser = JSON.parse(localStorage.getItem("user") || '[]');
 
     useEffect(() => {
         loadFeedData();
@@ -81,12 +82,12 @@ const FeedPage = () => {
     };
 
     const deletePost = async (postId) => {
-        try{
+        try {
             await apiService.deletePost(postId);
             setPosts(posts.filter(p => p.postId !== postId));
             setSelectedPost(null);
             alert("게시물이 삭제되었습니다.");
-        }catch(err) {
+        } catch (err) {
             alert("게시물 삭제에 실패했습니다.");
         }
     }
@@ -136,10 +137,10 @@ const FeedPage = () => {
                                     <img src={getImageUrl(post.userAvatar)} className="post-user-avatar"/>
                                     <span className="post-username">{post.userName}</span>
                                 </div>
-                              <PostOptionMenu
-                                  post={post}
-                                  currentUserId={currentUser.userId}
-                                  onDelete={deletePost} />
+                                <PostOptionMenu
+                                    post={post}
+                                    currentUserId={currentUser.userId}
+                                    onDelete={deletePost}/>
                             </div>
 
                             <img src={post.postImage} className="post-image"/>
@@ -163,7 +164,7 @@ const FeedPage = () => {
 
                                 <div className="post-caption">
                                     <span className="post-caption-username">{post.userName}</span>
-                                    <MentionText  text={post.postCaption}/>
+                                    <MentionText text={post.postCaption}/>
 
                                 </div>
 
@@ -180,6 +181,16 @@ const FeedPage = () => {
                     ))
                 )}
             </div>
+
+            {selectedPost && (
+                <PostDetailModal
+                    post={selectedPost}
+                    currentUserId={currentUser.userId}
+                    onClose={() => setSelectedPost(null)}
+                    onDelete={deletePost}
+                    onToggleLike={toggleLike}
+                />
+            )}
         </div>
     );
 };
