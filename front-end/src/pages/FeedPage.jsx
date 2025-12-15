@@ -5,6 +5,7 @@ import {Heart, MessageCircle, Send, Bookmark, MoreHorizontal} from 'lucide-react
 import Header from "../components/Header";
 import {getImageUrl} from "../service/commonService";
 import MentionText from "../components/MentionText";
+import PostOptionMenu from "../components/PostOptionMenu";
 // TODO 12: MentionText 컴포넌트 import
 // import MentionText from "../components/MentionText";
 
@@ -13,8 +14,10 @@ const FeedPage = () => {
     const [posts, setPosts] = useState([]);
     const [stories, setStories] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [selectedPost, setSelectedPost] = useState(null);
 
     const navigate = useNavigate();
+    const currentUser = JSON.parse(localStorage.getItem("user") ||'[]');
 
     useEffect(() => {
         loadFeedData();
@@ -77,6 +80,17 @@ const FeedPage = () => {
         }
     };
 
+    const deletePost = async (postId) => {
+        try{
+            await apiService.deletePost(postId);
+            setPosts(posts.filter(p => p.postId !== postId));
+            setSelectedPost(null);
+            alert("게시물이 삭제되었습니다.");
+        }catch(err) {
+            alert("게시물 삭제에 실패했습니다.");
+        }
+    }
+
     if (loading) {
         return (
             <div className="feed-container">
@@ -122,7 +136,10 @@ const FeedPage = () => {
                                     <img src={getImageUrl(post.userAvatar)} className="post-user-avatar"/>
                                     <span className="post-username">{post.userName}</span>
                                 </div>
-                                <MoreHorizontal className="post-more-icon"/>
+                              <PostOptionMenu
+                                  post={post}
+                                  currentUserId={currentUser.userId}
+                                  onDelete={deletePost} />
                             </div>
 
                             <img src={post.postImage} className="post-image"/>
