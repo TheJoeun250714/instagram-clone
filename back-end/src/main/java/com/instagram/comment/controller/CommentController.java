@@ -2,6 +2,7 @@ package com.instagram.comment.controller;
 
 
 import com.instagram.comment.model.dto.Comment;
+import com.instagram.comment.model.dto.CommentResponse;
 import com.instagram.comment.model.service.CommentService;
 import com.instagram.common.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
@@ -26,9 +27,10 @@ public class CommentController {
      *  getComments
      */
     @GetMapping("/posts/{postId}/comments")
-    public ResponseEntity<List<Comment>> getCommentsByPostId(@PathVariable("postId") int postId) {
+    public ResponseEntity<CommentResponse> getCommentsByPostId(@PathVariable("postId") int postId) {
         try {
-            List<Comment> comments = commentService.getCommentsByPostId(postId);
+            // 댓글들 배열과 댓글 개수 들어있다.
+            CommentResponse comments = commentService.getCommentsByPostId(postId);
             return ResponseEntity.ok(comments);
         } catch (Exception e) {
             log.error("댓글 조회 실패 : {}",e.getMessage());
