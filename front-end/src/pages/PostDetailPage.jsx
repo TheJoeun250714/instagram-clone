@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {X, Heart, MessageCircle, Send, Bookmark} from 'lucide-react';
+import {X, Heart, MessageCircle, Send, Bookmark, Trash2} from 'lucide-react';
 import {getImageUrl} from '../service/commonService';
 
 import Header from "../components/Header";
@@ -14,13 +14,22 @@ const PostDetailPage = () => {
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [selectedPost, setSelectedPost] = useState(null);
+    const [comments, setComments] = useState([]);
+    const [commentText,setCommentText] = useState('');
 
     const navigate = useNavigate();
     const currentUser = JSON.parse(localStorage.getItem("user") || '');
 
     useEffect(() => {
         loadFeedData();
+        loadComments();
     }, []);
+
+
+    const loadComments = async () => {};
+    const handleDeleteComment = () => {};
+    const handleCommentSubmit = async (postId) => {};
+
 
     const loadFeedData = async () => {
         setLoading(true);
@@ -35,7 +44,6 @@ const PostDetailPage = () => {
         }
 
     };
-
     const handleShare = async () => {
         const shareUrl = `${window.location.origin}/post/${post.postId}`;
 
@@ -82,7 +90,6 @@ const PostDetailPage = () => {
             loadFeedData();
         }
     };
-
     const deletePost = async (postId) => {
         try {
             await apiService.deletePost(postId);
@@ -149,7 +156,33 @@ const PostDetailPage = () => {
                         <div className="post-caption">
                             <span className="post-caption-username">{post.userName}</span>
                             <MentionText text={post.postCaption}/>
-
+                        </div>
+                        <div className="comments-section">
+                            {comments.length === 0 ?(
+                                <div className="comments-empty">
+                                    첫 번째 댓글을 남겨보세요!
+                                </div>
+                            ):(
+                                comments.map((comment, i) => (
+                                    <div key={i} className="comment-item">
+                                       <img className="comment-avatar" />
+                                       <div className="comment-content">
+                                           <div className="comment-text">
+                                               <span className="comment-username"></span>
+                                                <MentionText text={comment.commentContent} />
+                                           </div>
+                                           <div className="comment-time">
+                                               {comment.createdAt}
+                                           </div>
+                                       </div>
+                                        {currentUser.userId === comment.userId &&(
+                                            <Trash2 size={16}
+                                                    className="comment-delete-btn"
+                                                    onClick={() => handleDeleteComment(comment.commentId)} />
+                                        )}
+                                    </div>
+                                ))
+                            )}
                         </div>
 
                         {post.commentCount > 0 && (
