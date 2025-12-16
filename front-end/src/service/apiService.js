@@ -183,20 +183,6 @@ const apiService = {
         return res.data;
     },
 
-    // ===== 사용자 API =====
-
-    // TODO: 사용자 프로필 조회
-    // GET /users/:userId
-    getUser: async (userId) => {
-        // TODO: API 호출을 완성하세요
-    },
-
-    // TODO: 사용자 게시물 조회
-    // GET /users/:userId/posts
-    getUserPosts: async (userId) => {
-        // TODO: API 호출을 완성하세요
-    },
-
 
     updateProfile: async (userId, formData) => {
         try {

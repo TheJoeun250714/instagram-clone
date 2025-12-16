@@ -3792,3 +3792,83 @@ This generated password is for development use only. Your security configuration
 2025-12-15 16:49:01.860  INFO 21752 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Parameter : [5, 1]
 2025-12-15 16:49:01.862  INFO 21752 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
 2025-12-15 16:49:01.863  INFO 21752 --- [http-nio-9000-exec-10] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 17:06:58.423  INFO 21752 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-12-15 17:10:01.845  INFO 21752 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsById()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 17:10:01.846  INFO 21752 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostById() 서비스 호출 ==========
+2025-12-15 17:10:01.846  INFO 21752 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [5, 1]
+2025-12-15 17:10:01.868  INFO 21752 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 22ms
+2025-12-15 17:10:01.868  INFO 21752 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 17:11:01.656  INFO 21752 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsById()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 17:11:01.657  INFO 21752 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostById() 서비스 호출 ==========
+2025-12-15 17:11:01.657  INFO 21752 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Parameter : [5, 1]
+2025-12-15 17:11:01.661  INFO 21752 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : Running Time : 4ms
+2025-12-15 17:11:01.661  INFO 21752 --- [http-nio-9000-exec-9] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 17:11:01.668  INFO 21752 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : [PostController.getAllPostsById()] 요청 / ip : 0:0:0:0:0:0:0:1
+2025-12-15 17:11:01.670  INFO 21752 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ========== PostServiceImpl.getPostById() 서비스 호출 ==========
+2025-12-15 17:11:01.670  INFO 21752 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Parameter : [5, 1]
+2025-12-15 17:11:01.673  INFO 21752 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : Running Time : 2ms
+2025-12-15 17:11:01.673  INFO 21752 --- [http-nio-9000-exec-8] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-15 17:12:39.140  INFO 21752 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 17:12:39.144  INFO 21752 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-15 17:12:39.145  INFO 21752 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-15 17:12:39.145  INFO 21752 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48b042d5]]
+2025-12-15 17:12:39.146  INFO 21752 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-15 17:12:39.151  INFO 21752 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 17:12:39.153  INFO 21752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-15 17:12:39.160  INFO 21752 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-15 17:12:43.975  INFO 24336 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.8 with PID 24336 (E:\project\instagram-clone\back-end\build\classes\java\main started by TJ in E:\project\instagram-clone\back-end)
+2025-12-15 17:12:43.977  INFO 24336 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-15 17:12:44.045  INFO 24336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-15 17:12:44.045  INFO 24336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-15 17:12:46.172  INFO 24336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-15 17:12:46.206  INFO 24336 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-12-15 17:12:47.791  INFO 24336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-15 17:12:47.809  INFO 24336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-15 17:12:47.809  INFO 24336 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-15 17:12:47.910  INFO 24336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-15 17:12:47.910  INFO 24336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3865 ms
+2025-12-15 17:12:49.312  INFO 24336 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-15 17:12:49.458  INFO 24336 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-12-15 17:12:49.521  INFO 24336 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-15 17:12:49.966  INFO 24336 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-15 17:12:50.013  INFO 24336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-15 17:12:50.288  INFO 24336 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@2d058286
+2025-12-15 17:12:50.291  INFO 24336 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-15 17:12:50.400  INFO 24336 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-15 17:12:51.046  INFO 24336 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-15 17:12:51.056  INFO 24336 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 17:12:52.141  WARN 24336 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-15 17:12:52.323  WARN 24336 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b1037d02-0ba2-4ba2-9253-b0244d9e5634
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-15 17:12:52.342  INFO 24336 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-15 17:12:53.879  WARN 24336 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-15 17:12:55.347  INFO 24336 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-15 17:12:55.931  INFO 24336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-15 17:12:56.182  INFO 24336 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-15 17:12:56.183  INFO 24336 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77269f7a]]
+2025-12-15 17:12:56.190  INFO 24336 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-15 17:12:56.221  INFO 24336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-15 17:12:56.254  INFO 24336 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 13.447 seconds (process running for 14.369)
+2025-12-15 17:12:56.630  INFO 24336 --- [RMI TCP Connection(4)-192.168.0.237] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-15 17:12:56.630  INFO 24336 --- [RMI TCP Connection(4)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-15 17:12:56.632  INFO 24336 --- [RMI TCP Connection(4)-192.168.0.237] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-15 17:13:56.050  INFO 24336 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-15 17:16:57.344  INFO 24336 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-15 17:16:57.349  INFO 24336 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-15 17:16:57.351  INFO 24336 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-15 17:16:57.351  INFO 24336 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@77269f7a]]
+2025-12-15 17:16:57.351  INFO 24336 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-15 17:16:57.357  INFO 24336 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-15 17:16:57.361  INFO 24336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-15 17:16:57.368  INFO 24336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
